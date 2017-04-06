@@ -1,0 +1,163 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}About Us{% endblock %}
+{% block contenido %}
+<!-- Begin text carousel intro section -->
+ <div class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/worldMap2.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;">Erasmus + Partner in Valencia</h1><hr class="ruler"></div>
+			<!-- End text carousel intro section -->
+
+
+
+
+            <!-- Begin about section -->
+			<section id="about-section" class="page bg-style1">
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+                            <h2 align="center">About us</h2><br>
+																		<img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+
+                <!-- Begin rotate box-1 -->
+                <div class="rotate-box-1-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+                                    <div align="center">
+                                        <h4 style="font-weight:bold;"> Descripción</h4>
+                                        <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.
+																				Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+																				<p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.
+																				Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+																	  </div>
+
+                                </a>
+                            </div>
+
+
+                        </div> <!-- /.row -->
+
+
+
+
+                    </div> <!-- /.container -->
+
+                </div>
+
+
+
+
+								<!-- Begin download Brochure -->
+								<section id="cta-section">
+									<div class="cta">
+										<div class="container">
+												<div class="row">
+
+														<div class="col-md-9">
+																<h1>Download our Brochure</h1>
+																	<p>Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+															</div>
+
+															<div class="col-md-3">
+																<div class="cta-btn wow bounceInRight" data-wow-delay="0.4s">
+															<a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Download</a>
+																</div>
+															</div>
+
+													</div> <!-- /.row -->
+											</div> <!-- /.container -->
+									</div>
+								</section>
+
+								<!-- End Brochure -->
+
+
+                <!-- <div class="extra-space-l"></div>-->
+
+          </section>
+          <!-- End about section -->
+					<!-- Begin page header-->
+					<div class="page-header-wrapper">
+							<div class="container">
+									<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+											<h2>Our Team</h2><br>
+											<img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+									</div>
+							</div>
+					</div>
+					<!-- End page header-->
+					<!-- Begin Team-->
+					<div class="rotate-box-1-wrapper">
+							<div class="container">
+									<div class="row">
+											<div class="col-md-6 col-sm-12" align="center">
+													<a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+															<div class="rotate-box-info">
+																<img class="teamPic" src="{{ asset('img/fotoSara.jpg')}}">
+																	<h4 style="font-weight:bold;" class="text-center">Sara Carducci<br>Directora</h4>
+															</div>
+													</a>
+											</div>
+											<div class="col-md-6 col-sm-12" align="center">
+													<a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+
+															<div class="rotate-box-info">
+																	<img class="teamPic" src="{{ asset('img/fotoSara.jpg')}}">
+																	<h4 style="font-weight:bold;" class="text-center">Sebastián Peralta<br>Subdirector</h4>
+															</div>
+													</a>
+											</div>
+
+
+									</div> <!-- /.row -->
+
+
+
+
+							</div> <!-- /.container -->
+
+					</div>
+          <!-- End team-->
+
+
+
+
+            <!-- Begin offices -->
+            <section id="testimonial-section">
+                <div id="testimonial-trigger" class="testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/pexels-photo.jpg);">
+                    <div class="cover"></div>
+                    <!-- Begin page header-->
+                    <div class="page-header-wrapper">
+                        <div class="container">
+                            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                                <h2>Our Offices</h2><br>
+  														<img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End page header-->
+											<div class="container">
+													<div id="owl-partners" class="owl-carousel" align="center">
+															<img src="{{ asset('img/fotoSara.jpg')}}">
+															<img src="{{ asset('img/fotoSara.jpg')}}">
+															<img src="{{ asset('img/fotoSara.jpg')}}">
+															<img src="{{ asset('img/fotoSara.jpg')}}">
+															<img src="{{ asset('img/fotoSara.jpg')}}">
+															<img src="{{ asset('img/fotoSara.jpg')}}">
+															<img src="{{ asset('img/fotoSara.jpg')}}">
+													</div>
+											</div>
+
+                </div>
+            </section>
+            <!-- End offices -->
+
+
+
+
+{% endblock %}

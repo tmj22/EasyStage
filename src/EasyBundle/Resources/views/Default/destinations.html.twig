@@ -1,0 +1,339 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}Destinations{% endblock %}
+{% block contenido %}
+<!-- Carousel -->
+
+						<div id="header-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div id="cazza1" class="item active parallax"style="background-image: url(img/slide1.jpg);">
+								</div>
+								<div id="cazza2" class="item parallax"style="background-image: url(img/slide2.jpg);">
+								</div>
+								<div id="cazza3" class="item parallax"style="background-image: url(img/slide3.jpg);">
+								</div>
+							</div>
+						</div>
+
+							 <!-- End carousel -->
+
+
+
+						 <section id="about-section" class="page bg-style1" style="background-color:#f8f8f8;">
+							 <!-- Begin page header-->
+							 <div class="page-header-wrapper">
+									 <div class="container">
+											 <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+												 <h2>Choose Your Destination</h2><br>
+												 <img src="{{ asset ('img/puntos.png')}}" class="puntos" align="center">
+											 </div>
+									 </div>
+							 </div>
+							 <!-- End page header-->
+
+							 <!-- Begin rotate box-1 -->
+							 <div class="rotate-box-1-wrapper">
+									 <div class="container">
+											 <div class="row">
+													 <div class="col-md-4 col-sm-12" align="center">
+															 <a class="page-scroll darken cosa" href="#spain-section" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+																	 <div>
+																		 <img class="countryPic" src="{{ asset ('img/valencia.jpg')}}">
+																	 </div>
+															 </a>
+															 <h4 style="font-weight:bold;" class="text-center">Spain</h4>
+
+													 </div>
+													 <div class="col-md-4 col-sm-12" align="center">
+															 <a class="page-scroll darken cosa " href="#italy-section" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+																	 <div>
+																			 <img class="countryPic" src="{{ asset ('img/florence.jpg')}}">
+																	 </div>
+															 </a>
+															 <h4 style="font-weight:bold;" class="text-center">Italy</h4>
+
+													 </div>
+													 <div class="col-md-4 col-sm-12" align="center">
+															 <a class="page-scroll darken cosa " href="#france-section" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+																	 <div>
+																			 <img class="countryPic" src="{{ asset ('img/paris.jpg')}}">
+																	 </div>
+															 </a>
+															 <h4 style="font-weight:bold;" class="text-center">France</h4>
+
+
+													 </div>
+
+
+											 </div> <!-- /.row -->
+
+
+
+
+									 </div> <!-- /.container -->
+
+							 </div>
+
+
+
+
+
+
+
+							 <!-- <div class="extra-space-l"></div>-->
+
+				 </section>
+				 <!-- End about section -->
+
+
+
+				 <!-- Spain section -->
+				 <section id="spain-section" class="page text-center parallax" style="background-image: url(img/spain-bg.jpg);">
+				 <!-- Begin page header-->
+				 <div class="page-header-wrapper">
+						 <div class="container">
+								 <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+										 <h2 style="color:white;">Internship in Spain</h2><br>
+										 <img src="{{ asset ('img/puntos.png')}}" class="puntos" align="center">
+								 </div>
+						 </div>
+				 </div>
+				 <!-- End page header-->
+				 <!-- Begin roatet box-2 -->
+				 <div class="rotate-box-2-wrapper">
+						 <div class="container" >
+								 <div class="row">
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0" style="color:white;">
+														 <i class="fa fa-question-circle" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Why Spain?</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s" style="color:white;">
+														 <i class="fa fa-comment-o" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>General Information</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s" style="color:white;">
+														 <i class="fa fa-book" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Recommended Area</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s" style="color:white;">
+														 <i class="fa fa-file-text-o" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Required Documents</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+										 <div>
+									 <a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Available Offers in Spain</a>
+										 </div>
+								 </div> <!-- /.row -->
+						 </div> <!-- /.container -->
+
+				 </div>
+				 <!-- End rotate-box-2 -->
+				 </section>
+				 <!-- End Spain section -->
+
+				 <!-- Italy section -->
+				 <section id="italy-section" class="page text-center parallax" style="background-image: url(img/italy-bg.jpg);">
+				 <!-- Begin page header-->
+				 <div class="page-header-wrapper">
+						 <div class="container">
+								 <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+										 <h2 style="color:white;">Internship in Italy</h2><br>
+										 <img src="{{ asset ('img/puntos.png')}}" class="puntos" align="center">
+								 </div>
+						 </div>
+				 </div>
+				 <!-- End page header-->
+				 <!-- Begin roatet box-2 -->
+				 <div class="rotate-box-2-wrapper">
+						 <div class="container" >
+								 <div class="row">
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0" style="color:white;">
+														 <i class="fa fa-question-circle" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Why Italy?</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s" style="color:white;">
+														 <i class="fa fa-comment-o" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>General Information</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s" style="color:white;">
+														 <i class="fa fa-book" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Recommended Area</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s" style="color:white;">
+														 <i class="fa fa-file-text-o" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Required Documents</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+										 <div>
+									 <a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Available Offers in Italy</a>
+										 </div>
+								 </div> <!-- /.row -->
+						 </div> <!-- /.container -->
+
+				 </div>
+				 <!-- End rotate-box-2 -->
+				 </section>
+				 <!-- End Italy section -->
+
+
+				 <!-- France section -->
+				 <section id="france-section" class="page text-center parallax" style="background-image: url(img/france-bg.jpg);">
+				 <!-- Begin page header-->
+				 <div class="page-header-wrapper">
+						 <div class="container">
+								 <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+										 <h2 style="color:white;">Internship in France</h2><br>
+										 <img src="{{ asset ('img/puntos.png')}}" class="puntos" align="center">
+								 </div>
+						 </div>
+				 </div>
+				 <!-- End page header-->
+				 <!-- Begin roatet box-2 -->
+				 <div class="rotate-box-2-wrapper">
+						 <div class="container" >
+								 <div class="row">
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0" style="color:white;">
+														 <i class="fa fa-question-circle" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Why France?</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s" style="color:white;">
+														 <i class="fa fa-comment-o" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>General Information</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.4s" style="color:white;">
+														 <i class="fa fa-book" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Recommended Area</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+
+										 <div class="col-md-6 col-sm-6">
+												 <a href="#" class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.6s" style="color:white;">
+														 <i class="fa fa-file-text-o" aria-hidden="true" style="font-size:50px;"></i>
+														 <div class="rotate-box-info">
+																 <h4>Required Documents</h4>
+																 <p>Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.</p>
+														 </div>
+												 </a>
+										 </div>
+										 <div>
+									 <a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Available Offers in France</a>
+										 </div>
+								 </div> <!-- /.row -->
+						 </div> <!-- /.container -->
+
+				 </div>
+				 <!-- End rotate-box-2 -->
+				 </section>
+				 <!-- End France section -->
+
+
+
+
+
+					 <!-- Begin testimonials -->
+					 <section id="testimonial-section">
+							 <div id="testimonial-trigger" class="testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/testimonial-bg.jpg);">
+									 <div class="cover"></div>
+									 <!-- Begin page header-->
+									 <div class="page-header-wrapper">
+											 <div class="container">
+													 <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+															 <h2>Reviews</h2>
+															 <hr style="border-top: 5px solid #FFFFFF;">
+													 </div>
+											 </div>
+									 </div>
+									 <!-- End page header-->
+									 <div class="container">
+											 <div class="testimonial-inner center-block text-center">
+													 <div id="owl-testimonial" class="owl-carousel">
+															 <div class="item">
+																	 <blockquote>
+																			 <p>"This was my first experience with that team and outperformed my expectation! They know there stuff and I highly recommend them! A+++".</p>
+																			 <footer><cite title="Source Title">Daryl Hodgeman</cite></footer>
+																	 </blockquote>
+															 </div>
+															 <div class="item">
+																	 <blockquote>
+																			 <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+																			 tempor incididunt ut labore et dolore magna aliqua."</p>
+																			 <footer><cite title="Source Title">John Doe</cite></footer>
+																	 </blockquote>
+															 </div>
+															 <div class="item">
+																	 <blockquote>
+																			 <p>"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+																			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+																			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+																			 proident, sunt in culpa qui officia deserunt mollit".</p>
+																			 <footer><cite title="Source Title">John Doe</cite></footer>
+																	 </blockquote>
+															 </div>
+													 </div>
+											 </div>
+									 </div>
+							 </div>
+					 </section>
+					 <!-- End testimonials -->
+
+{% endblock %}

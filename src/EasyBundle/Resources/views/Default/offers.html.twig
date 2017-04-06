@@ -1,0 +1,212 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}Offers{% endblock %}
+{% block contenido %}
+<div class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/offers-bg.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;">Internship Offers Abroad</h1><hr class="ruler"></div>
+					 <!-- Begin buscador -->
+					 <section id="cta-section">
+						 <div class="cta">
+							 <div class="container">
+									 <div class="row">
+
+											 <div class="col-md-9">
+													 <h1>Search Offers</h1>
+												 </div>
+
+											 </div>
+											 <div class="container">
+	 <div class="row">
+			 <div class='col-sm-6'>
+					 <div class="form-group">
+							 <div class='input-group date' id='datetimepicker1'>
+									 <input type='text' class="form-control" />
+									 <span class="input-group-addon">
+											 <span class="glyphicon glyphicon-calendar"></span>
+									 </span>
+							 </div>
+					 </div>
+			 </div>
+			 <script type="text/javascript">
+					 $(function () {
+							 $('#datetimepicker1').datetimepicker();
+					 });
+			 </script>
+	 </div>
+</div>
+
+											 <form action="" role="search">
+									 <div class="form-group-stylish row">
+											 <div class="col-sm-3">
+												 <label for="type1" class="control-label">Location</label>
+												 <select class="form-control" name="" id="type1">
+													 <option value="">Any</option>
+													 <option value="">Spain</option>
+													 <option value="">Italy</option>
+													 <option value="">France</option>
+												 </select>
+											 </div>
+											 <div class="col-sm-3">
+												 <label for="type1" class="control-label">Area</label>
+												 <select class="form-control" name="" id="type1">
+													 <option value="">Any</option>
+													 <optgroup label="-Hotels & Restaurants-"></optgroup>
+													 <option value="">Reception & Booking</option>
+													 <option value="">Bar & Restaurant</option>
+													 <option value="">Kitchen</option>
+													 <option value="">Housekeeping</option>
+													 <option value="">Events</option>
+													 <option value="">Human Resources</option>
+													 <option value="">Maintenance</option>
+													 <option value="">Gardening</option>
+													 <option value="">Entertainers</option>
+													 <optgroup label="-Wellness-"></optgroup>
+													 <option value="">Hairdresser</option>
+													 <option value="">Beautician</option>
+													 <option value="">Physiotherapist</option>
+													 <optgroup label="-Technology-"></optgroup>
+													 <option value="">Information Technician</option>
+													 <option value="">Web Design & Development</option>
+													 <option value="">Graphic Design</option>
+													 <optgroup label="-Engineering-"></optgroup>
+													 <option value="">Automotive</option>
+													 <option value="">Agriculture & Food</option>
+													 <option value="">Industry & Materials</option>
+													 <option value="">Electrical & Electronics</option>
+													 <option value="">Metallurgical</option>
+													 <option value="">Arquitecture & Construction</option>
+													 <optgroup label="-Business & Communication-"></optgroup>
+													 <option value="">Administration</option>
+													 <option value="">Finances & Accounting</option>
+													 <option value="">Marketing & Commercial</option>
+													 <option value="">Social Networks & Communication</option>
+													 <option value="">Customer Service</option>
+													 <option value="">Logistics</option>
+												 </select>
+											 </div>
+											 <div class="col-sm-3"><field name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
+												 <label for="type1" class="control-label">Date</label>
+												 <field name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
+												 <select class="form-control" name="" id="type1">
+													 <option value="">Any</option>
+													 <option value="">1</option>
+													 <option value="">2</option>
+												 </select>
+											 </div>
+									 </div>
+									 <br>
+									 <div class="form-group-stylish row">
+											 <div class="col-sm-3">
+												 <label for="type1" class="control-label">Ref. Number</label>
+													 <input type="text" class="form-control" placeholder="Enter Ref. Number">
+											 </div>
+											 <div class="col-sm-3">
+												 <label for="type1" class="control-label">Key Word</label>
+													 <input type="text" class="form-control" placeholder="Enter Key Word">
+											 </div>
+											 <div class="col-md-3">
+												 <div class="cta-btn " >
+												 <a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Search</a>
+												 </div>
+											 </div>
+									 </div>
+							 </form>
+
+										 </div> <!-- /.row -->
+								 </div> <!-- /.container -->
+						 </div>
+					 </section>
+
+					 <!-- End buscador -->
+					 <!-- ========= Begin offers =========-->
+					 <div class="page-header-wrapper">
+							 <div class="container">
+									 <div class="page-header text-center">
+											 <h2 style="margin-top:50px;">999 offers available</h2><br>
+											 <img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+									 </div>
+							 </div>
+					 </div>
+
+
+					 <div class="note">
+						 <div class="row">
+							 <div class="col-md-3">
+									 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
+							 </div>
+							 <div class="col-md-9">
+									 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
+									 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
+									 <hr>
+									 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+							 </div>
+						 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+
+						 <div class="note">
+							 <div class="row">
+								 <div class="col-md-3">
+										 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
+								 </div>
+								 <div class="col-md-9">
+										 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
+										 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
+										 <hr>
+										 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+								 </div>
+							 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+
+							 <div class="note">
+								 <div class="row">
+									 <div class="col-md-3">
+											 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
+									 </div>
+									 <div class="col-md-9">
+											 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
+											 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
+											 <hr>
+											 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+									 </div>
+								 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+
+								 <div class="note">
+									 <div class="row">
+										 <div class="col-md-3">
+												 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
+										 </div>
+										 <div class="col-md-9">
+												 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
+												 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
+												 <hr>
+												 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+										 </div>
+									 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+
+									 <div class="note">
+										 <div class="row">
+											 <div class="col-md-3">
+													 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
+											 </div>
+											 <div class="col-md-9">
+													 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
+													 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
+													 <hr>
+													 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+											 </div>
+										 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+
+										 <div class="note">
+											 <div class="row">
+												 <div class="col-md-3">
+														 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
+												 </div>
+												 <div class="col-md-9">
+														 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
+														 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
+														 <hr>
+														 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+												 </div>
+											 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+
+
+							 <!-- ========= End offers =========-->
+							 <div class="text-center"><h2 style="color:grey;">1-2-3<h2></div>
+{% endblock %}

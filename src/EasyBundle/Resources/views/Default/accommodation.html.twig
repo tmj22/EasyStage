@@ -1,0 +1,98 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}Accommodation{% endblock %}
+{% block contenido %}
+<!-- ========= Banner =========-->
+
+<!-- Carousel -->
+
+<div class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/accommodation-banner.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;"></div>
+
+			 <!-- End carousel -->
+
+
+
+			 <section id="about-section" class="page bg-style1" style="background-color: #aec917;padding:0px;">
+					 <div id="about-section" class="page bg-style1 esquina" style="background-color:white;">
+			 <!-- Begin page header-->
+			 <div class="page-header-wrapper">
+					 <div class="container">
+							 <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+								 <h2>Find A Suitable Accommodation</h2><br>
+								 <img src="{{asset('img/puntos.png')}}" class="puntos" align="center">
+							 </div>
+					 </div>
+			 </div>
+			 <!-- End page header-->
+
+			 <!-- Begin Accommodation -->
+			 <div class="rotate-box-1-wrapper">
+					 <div class="container">
+							 <div class="row">
+								 <div class="col-md-12 col-sm-12" align="center">
+									 <h4>We can help you to find an accommodation choosing between the following options.</h4>
+									 <div>
+									 <div class="col-md-6 col-sm-12" align="center">
+											 <div class="page-scroll" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+													 <div>
+														 <img class="accommodationPic" src="{{asset('img/sharedflat.jpg')}}" style="border: 5px solid #aec917;">
+													 </div>
+											 </div>
+											 <h4 style="font-weight:bold;" class="text-center">Shared Flat</h4>
+											 <p>Ideal for groups or for all students who want more independence.
+													 The ideal option for those who want to share flat with students of other nationalities and whose stay is equal to or greater than 1 month.
+													 All the apartments are perfectly equipped with everything you could need during your stay: washing machine, fridge, iron ... and above all, WiFi</p>
+													 <br><a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Check the availability</a>
+									 </div>
+									 <div class="col-md-6 col-sm-12" align="center">
+											 <div class="page-scroll" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+													 <div>
+															 <img class="accommodationPic" src="{{asset('img/hostfamily.jpg')}}" style="border: 5px solid #aec917;">
+													 </div>
+											 </div>
+											 <h4 style="font-weight:bold;" class="text-center">Host Families</h4>
+											 <p>If your idea is to immerse yourself into the foreign culture lifestyle, this is the best option.
+													 You will be staying with one of our host families, in full family harmony learning new habits and typical customs that will enrich your experience abroad.
+													 You can choose between accommodation + breakfast, half board or full board.
+													 Laundry service included. Recommended option for stays of 1 to 5 weeks.</p>
+													 <br><a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Check the availability</a>
+
+									 </div>
+									 <div class="col-md-6 col-sm-12" align="center">
+											 <div class="page-scroll" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+													 <div>
+															 <img class="accommodationPic" src="{{asset('img/residence.jpg')}}" style="border: 5px solid #aec917;">
+													 </div>
+											 </div>
+											 <h4 style="font-weight:bold;" class="text-center">University Residence</h4>
+											 <p>You can choose between several regimen.
+													 You will have at your disposal different services: study areas, living room, gym, games room, laundry, 24 hour assistance.
+													 You will have your privacy if you choose the single room or you can choose the option of sharing a room with another student. Recommended for long stays.</p>
+
+									 <br><a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Check the availability</a>
+									 </div>
+
+									 <div class="col-md-6 col-sm-12" align="center">
+											 <div class="page-scroll" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+													 <div>
+															 <img class="accommodationPic" src="{{asset('img/hotel.jpg')}}" style="border: 5px solid #aec917;">
+													 </div>
+											 </div>
+											 <h4 style="font-weight:bold;" class="text-center">Studio Apartment, B&B & Hotel</h4>
+												 <p>Recommended for staff mobilities.</p>
+												 <br><a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Check the availability</a>
+									 </div>
+
+
+							 </div> <!-- /.row -->
+
+
+
+					 </div> <!-- /.container -->
+
+			 </div>
+
+ </section>
+ <!-- End Accommodation section -->
+
+{% endblock %}
