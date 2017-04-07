@@ -9,10 +9,6 @@ use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\File\MimeType\FileinfoMimeTypeGuesser;
 
-use Symfony\Component\HttpFoundation\Request;
-use EasyBundle\Entity\Offers;
-use EasyBundle\Form\OffersType;
-
 class HomeController extends Controller
 {
     /**
@@ -44,11 +40,7 @@ class HomeController extends Controller
      */
     public function OffersAction()
     {
-
-      $repository = $this->getDoctrine()->getRepository('EasyBundle:Offers');
-      $offers = $repository->findAll();
-      return $this->render('EasyBundle:Default:offers.html.twig',array('offers' => $offers));
-
+        return $this->render('EasyBundle:Default:offers.html.twig');
     }
 
     /**

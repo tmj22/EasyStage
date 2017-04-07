@@ -123,88 +123,26 @@
 									 <div class="page-header text-center">
 											 <h2 style="margin-top:50px;">999 offers available</h2><br>
 											 <img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+
 									 </div>
 							 </div>
 					 </div>
 
-
+{% for offer in offers %}
 					 <div class="note">
 						 <div class="row">
 							 <div class="col-md-3">
 									 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
 							 </div>
 							 <div class="col-md-9">
-									 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
-									 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
+									 <h3 style="color:grey;">{{ offer.name }}</h3>
+
+									 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: {{ offer.beginDate }} - {{ offer.endDate }} </a><span class="caret"></span><a>Referencia: {{ offer.reference }}</a>
 									 <hr>
-									 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+									 <p style="color:grey;"> {{ offer.description }}</p>
 							 </div>
 						 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
-
-						 <div class="note">
-							 <div class="row">
-								 <div class="col-md-3">
-										 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
-								 </div>
-								 <div class="col-md-9">
-										 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
-										 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
-										 <hr>
-										 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
-								 </div>
-							 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
-
-							 <div class="note">
-								 <div class="row">
-									 <div class="col-md-3">
-											 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
-									 </div>
-									 <div class="col-md-9">
-											 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
-											 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
-											 <hr>
-											 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
-									 </div>
-								 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
-
-								 <div class="note">
-									 <div class="row">
-										 <div class="col-md-3">
-												 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
-										 </div>
-										 <div class="col-md-9">
-												 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
-												 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
-												 <hr>
-												 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
-										 </div>
-									 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
-
-									 <div class="note">
-										 <div class="row">
-											 <div class="col-md-3">
-													 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
-											 </div>
-											 <div class="col-md-9">
-													 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
-													 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
-													 <hr>
-													 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
-											 </div>
-										 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
-
-										 <div class="note">
-											 <div class="row">
-												 <div class="col-md-3">
-														 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
-												 </div>
-												 <div class="col-md-9">
-														 <h3 style="color:grey;">Prácticas de desarrollo en aplicaciones web</h3>
-														 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: Abril 2017 - Junio 2017 </a><span class="caret"></span><a>Referencia: EK9984-079</a>
-														 <hr>
-														 <p style="color:grey;"> Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
-												 </div>
-											 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+{% endfor %}
 
 
 							 <!-- ========= End offers =========-->
