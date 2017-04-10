@@ -11,6 +11,7 @@
 
 											 <div class="col-md-9">
 													 <h1>Search Offers</h1>
+
 												 </div>
 
 											 </div>
@@ -128,23 +129,31 @@
 							 </div>
 					 </div>
 
-{% for offer in offers %}
+{% for offer in pagination %}
+
 					 <div class="note">
 						 <div class="row">
 							 <div class="col-md-3">
-									 <img class="offerPic" src="{{ asset('img/florence.jpg')}}">
+									 <a href="/offers/{{ offer.id }}"><img class="offerPic" src="{{ asset('img/florence.jpg')}}"></a>
 							 </div>
 							 <div class="col-md-9">
-									 <h3 style="color:grey;">{{ offer.name }}</h3>
+									 <a href="/offers/{{ offer.id }}"><h3 style="color:grey;">{{ offer.name }}</h3></a>
 
 									 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: {{ offer.beginDate }} - {{ offer.endDate }} </a><span class="caret"></span><a>Referencia: {{ offer.reference }}</a>
 									 <hr>
 									 <p style="color:grey;"> {{ offer.description }}</p>
 							 </div>
 						 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+						 </a>
 {% endfor %}
 
 
 							 <!-- ========= End offers =========-->
-							 <div class="text-center"><h2 style="color:grey;">1-2-3<h2></div>
+							 <div class="row">
+								  <div class="col-md-12">
+										 <div class="navigation" style="text-align:center">
+												 {{ knp_pagination_render(pagination) }}
+										 </div>
+									</div>
+						  </div>
 {% endblock %}

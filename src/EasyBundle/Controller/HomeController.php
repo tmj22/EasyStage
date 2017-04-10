@@ -39,17 +39,7 @@ class HomeController extends Controller
         return $this->render('EasyBundle:Default:europeanprojects.html.twig');
     }
 
-    /**
-     * @Route("/offers")
-     */
-    public function OffersAction()
-    {
 
-      $repository = $this->getDoctrine()->getRepository('EasyBundle:Offers');
-      $offers = $repository->findAll();
-      return $this->render('EasyBundle:Default:offers.html.twig',array('offers' => $offers));
-
-    }
 
     /**
      * @Route("/destinations")
@@ -106,4 +96,42 @@ class HomeController extends Controller
 
           return $response;
       }
+
+
+        /**
+        * @Route("/offers")
+        **/
+
+      public function offersAction(Request $request) {
+        $em = $this->getDoctrine()->getEntityManager();
+        $dql = "SELECT e FROM EasyBundle:Offers e";
+        $query = $em->createQuery($dql);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+                $query,
+                $request->query->getInt('page', 1),
+                5
+        );
+
+        return $this->render('EasyBundle:Default:offers.html.twig',
+                array('pagination' => $pagination));
+    }
+
+    /**
+    * @Route("/offers/{id}")
+    **/
+
+    public function offerDetailAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->createQuery("SELECT o FROM EasyBundle:Offers o WHERE o.id = :id")->setParameter("id", $id)->getResult();
+
+
+
+        return $this->render('EasyBundle:Default:offerdetail.html.twig',array("offer" => $offer));
+
+    }
+
+
+
 }
