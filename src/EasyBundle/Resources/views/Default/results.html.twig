@@ -16,22 +16,40 @@
 
 											 </div>
 											 <div class="container">
-
-
+	 <div class="row">
+			 <div class='col-sm-6'>
+					 <div class="form-group">
+							 <div class='input-group date' id='datetimepicker1' style="margin-left: -14px;">
+									 <input type='text' class="form-control" />
+									 <span class="input-group-addon" style="margin-left: -14px;">
+											 <span class="glyphicon glyphicon-calendar"></span>
+									 </span>
+							 </div>
+					 </div>
+			 </div>
+			 <script type="text/javascript">
+					 $(function () {
+							 $('#datetimepicker1').datetimepicker();
+					 });
+			 </script>
+	 </div>
+</div>
 
 											 <form action="filter" role="search"  method="GET">
 									 <div class="form-group-stylish row">
 											 <div class="col-sm-3">
-												 <label for="type1" class="control-label">Search by Location & Area</label>
-												 <select class="form-control" name="location" id="location">
-													 <option value="1">Spain</option>
-													 <option value="2">Italy</option>
-													 <option value="3">France</option>
+												 <label for="type1" class="control-label">Location</label>
+												 <select class="form-control" name="" id="type1">
+													 <option value="">Any</option>
+													 <option value="">Spain</option>
+													 <option value="">Italy</option>
+													 <option value="">France</option>
 												 </select>
 											 </div>
 											 <div class="col-sm-3">
-												 <label for="type1" class="control-label"></label>
+												 <label for="type1" class="control-label">Area</label>
 												 <select class="form-control" name="area" id="area">
+													 <option value="">Any</option>
 													 <optgroup label="-Hotels & Restaurants-"></optgroup>
 													 <option value="1">Reception & Booking</option>
 													 <option value="2">Bar & Restaurant</option>
@@ -65,28 +83,33 @@
 													 <option value="26">Customer Service</option>
 													 <option value="27">Logistics</option>
 												 </select>
-
 											 </div>
-
-											 <div class="col-sm-3">
-												 <button type="submit" class="btn btn-default btn-lg"style="margin-top:10px;">Search</button>
+											 <div class="col-sm-3"><field name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
+												 <label for="type1" class="control-label">Date</label>
+												 <field name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
+												 <select class="form-control" name="" id="type1">
+													 <option value="">Any</option>
+													 <option value="">1</option>
+													 <option value="">2</option>
+												 </select>
 											 </div>
-
 									 </div>
-									 </form>
-
-
-									 <form action="reference" role="search"  method="GET">
 									 <br>
 									 <div class="form-group-stylish row">
 											 <div class="col-sm-3">
-												 <label for="type1" class="control-label">Search By Ref. Number</label>
-													 <input type="text" class="form-control" placeholder="Enter Ref. Number" name="refNumber" id="refNumber">
+												 <label for="type1" class="control-label">Ref. Number</label>
+													 <input type="text" class="form-control" placeholder="Enter Ref. Number">
 											 </div>
 											 <div class="col-sm-3">
-												 <button type="submit" class="btn btn-default btn-lg" style="margin-top:10px;">Search</button>
+												 <label for="type1" class="control-label">Key Word</label>
+													 <input type="text" class="form-control" placeholder="Enter Key Word">
 											 </div>
+											 <div class="col-md-3">
+												 <div class="cta-btn " >
 
+												 	 <button type="submit" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span>Search</button>
+												 </div>
+											 </div>
 									 </div>
 							 </form>
 
@@ -101,7 +124,17 @@
 							 <div class="container">
 									 <div class="page-header text-center">
 											 <h2 style="margin-top:50px;">{{pagination.getTotalItemCount}} Offers Available</h2><br>
+
 											 <img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+											 {% if pagination.getTotalItemCount == 0 %}
+
+												 <div class="cta-btn " >
+
+												 	 <button type="submit" class="btn btn-default btn-lg">Back</button>
+												 </div>
+
+
+{% endif %}
 
 									 </div>
 							 </div>

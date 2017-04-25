@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "25ec00ca444be5d8b9d4275ba73d1922",
-    "content-hash": "fc78e68f78ffe8ad2a861ecdde0c9575",
+    "hash": "7fc33f3645691fbc7a23068b414667d0",
+    "content-hash": "50c77f159a616ae542d9a2b32c3f753c",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1070,6 +1070,66 @@
             "time": "2017-03-21 09:45:46"
         },
         {
+            "name": "lexik/form-filter-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lexik/LexikFormFilterBundle.git",
+                "reference": "28c09d6d9f278875ca9648c4b66eeb457c37d3b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lexik/LexikFormFilterBundle/zipball/28c09d6d9f278875ca9648c4b66eeb457c37d3b6",
+                "reference": "28c09d6d9f278875ca9648c4b66eeb457c37d3b6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.4.8",
+                "php": ">=5.5.9",
+                "symfony/form": "~2.8|~3.0",
+                "symfony/framework-bundle": "~2.8|~3.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm-bundle": "~3.0",
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lexik\\Bundle\\FormFilterBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dev Lexik",
+                    "email": "dev@lexik.fr"
+                },
+                {
+                    "name": "Cedric Girard",
+                    "email": "c.girard@lexik.fr"
+                }
+            ],
+            "description": "This bundle aim to provide classes to build some form filters and then build a doctrine query from this form filter.",
+            "homepage": "https://github.com/lexik/LexikFormFilterBundle",
+            "keywords": [
+                "bundle",
+                "doctrine",
+                "filter",
+                "form",
+                "symfony"
+            ],
+            "time": "2017-03-27 07:28:34"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.22.1",
             "source": {
@@ -1194,6 +1254,62 @@
                 "random"
             ],
             "time": "2017-03-13 16:27:32"
+        },
+        {
+            "name": "petkopara/multi-search-bundle",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/petkopara/PetkoparaMultiSearchBundle.git",
+                "reference": "17c8e9d7cc7b9ca44ae80cad085083433181bd01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/petkopara/PetkoparaMultiSearchBundle/zipball/17c8e9d7cc7b9ca44ae80cad085083433181bd01",
+                "reference": "17c8e9d7cc7b9ca44ae80cad085083433181bd01",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "^1.6",
+                "symfony/form": "~2.8|~3.0",
+                "symfony/symfony": "~2.8|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Petkopara\\MultiSearchBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Petko Petkov",
+                    "email": "petkopara@gmail.com"
+                }
+            ],
+            "description": "Symfony3 bundle that provides multi search doctrine query builder for forms and entities .",
+            "homepage": "https://github.com/petkopara/PetkoparaMultiSearchBundle",
+            "keywords": [
+                "doctrine",
+                "multi-search",
+                "query-builder",
+                "symfony3"
+            ],
+            "time": "2016-10-24 20:35:09"
         },
         {
             "name": "psr/log",
@@ -2057,6 +2173,119 @@
                 "templating"
             ],
             "time": "2017-03-22 15:40:09"
+        },
+        {
+            "name": "waldo/datatable-bundle",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/waldo2188/DatatableBundle.git",
+                "reference": "d01f2c827729c00741b4530ae6349dd9c014048f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/waldo2188/DatatableBundle/zipball/d01f2c827729c00741b4530ae6349dd9c014048f",
+                "reference": "d01f2c827729c00741b4530ae6349dd9c014048f",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.1",
+                "php": ">=5.4",
+                "twig/twig": "~1.8"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.4",
+                "doctrine/orm": "^2.4.8",
+                "phpunit/phpunit": "~4.8",
+                "symfony/symfony": ">=2.6.0,<=4.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Waldo\\DatatableBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ali hichem",
+                    "email": "ali.hichem@mail.com",
+                    "role": "Original Developer"
+                },
+                {
+                    "name": "Sébastien Convers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Valérian Girard",
+                    "email": "valerian.girard@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Symfony2 Ajax Datagrid Bundle for doctrine2 entities",
+            "homepage": "https://github.com/waldo2188/DatatableBundle",
+            "keywords": [
+                "Symfony2",
+                "datatable",
+                "jquery"
+            ],
+            "time": "2016-03-31 13:55:15"
+        },
+        {
+            "name": "webinarium/datatables-bundle",
+            "version": "1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webinarium/DataTablesBundle.git",
+                "reference": "83de4a3cc039790c6af531e6a022f220a2d71ccc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webinarium/DataTablesBundle/zipball/83de4a3cc039790c6af531e6a022f220a2d71ccc",
+                "reference": "83de4a3cc039790c6af531e6a022f220a2d71ccc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "psr/log": "^1.0",
+                "symfony/config": "^2.8|^3.0",
+                "symfony/dependency-injection": "^2.8|^3.0",
+                "symfony/http-foundation": "^2.8|^3.0",
+                "symfony/http-kernel": "^2.8|^3.0",
+                "symfony/validator": "^2.8|^3.0"
+            },
+            "replace": {
+                "etraxis/datatables-bundle": "*"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.2",
+                "doctrine/cache": "^1.5",
+                "fabpot/php-cs-fixer": "^1.10",
+                "phpunit/phpunit": "^4.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DataTables\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "DataTables Symfony bundle",
+            "homepage": "https://github.com/arodygin/DataTablesBundle",
+            "keywords": [
+                "datatable",
+                "datatables"
+            ],
+            "time": "2016-05-02 02:57:28"
         }
     ],
     "packages-dev": [
@@ -2175,7 +2404,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "lexik/form-filter-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

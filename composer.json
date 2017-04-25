@@ -21,7 +21,11 @@
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "knplabs/knp-paginator-bundle": "2.5.*"
+        "knplabs/knp-paginator-bundle": "2.5.*",
+        "petkopara/multi-search-bundle": "^1.0",
+        "waldo/datatable-bundle": "^4.0",
+        "lexik/form-filter-bundle": "dev-master",
+        "webinarium/datatables-bundle": "^1.2"
 
     },
     "require-dev": {

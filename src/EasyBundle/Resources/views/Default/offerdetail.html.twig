@@ -2,11 +2,35 @@
 {% extends 'base.html.twig' %}
 {% block titulo %}Offers{% endblock %}
 {% block contenido %}
-					 <!-- ========= Begin offers =========-->
-					 <div class="page-header-wrapper">
+
+
+<!-- Begin cta -->
+<section id="cta-section" style="margin-top:60px;">
+	<div class="cta">
+		<div class="container">
+				<div class="row">
+
+						<div class="col-md-9">
+								<h1>Send us your CV</h1>
+									<p>Inspired by nature, follow technology, appreciate the classics. You can build modern & professional websites with Unika. The possibilities are just endless.</p>
+							</div>
+
+							<div class="col-md-3">
+								<div>
+							<a class="btn btn-default btn-lg" href="http://www.imransdesign.com/" target="_blank" role="button">Apply now</a>
+								</div>
+							</div>
+
+					</div> <!-- /.row -->
+			</div> <!-- /.container -->
+	</div>
+</section>
+<!-- End cta -->
+<!-- ========= Begin offers =========-->
+					 <div class="page-header-wrapper" style="margin-top:50px;">
 							 <div class="container">
 									 <div class="page-header text-center">
-											 <h2 style="margin-top:200px;">{% for offer in offer %}{{ offer.name }}{% endfor %}</h2><br>
+											 <h2>{% for offer in offer %}{{ offer.name }}{% endfor %}</h2><br>
 											 <img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
 
 									 </div>
@@ -14,21 +38,97 @@
 					 </div>
 
 		{% for offer in offer %}
-					 <div class="note">
-						 <div class="row">
-							 <div class="col-md-3">
-									 <a href=""><img class="offerPic" src="{{ asset('img/florence.jpg')}}"></a>
-							 </div>
-							 <div class="col-md-9">
-									 <a href=""><h3 style="color:grey;">{{ offer.name }}</h3></a>
+		<div class="note" style="padding-bottom:50px;box-shadow: 8px 8px 8px 8px #888888;line-height: 1.5;">
+			<div class="row" style="color:grey;">
+				<div class="col-md-12">
+						<h2 style="color:grey;" align="center">Offer Reference Nº {{ offer.reference }}</h2>
+						<hr>
+				</div>
+				<div class="col-md-12">
+						<h4 style="color:grey;margin-top:20px;" align="center">General Information About The Company </h4>
+						<hr>
+						<p style="margin-bottom:20px;">{{ offer.information|nl2br }}
+						</p>
+						<hr>
+						<h4 style="color:grey;margin-top:20px;" align="center">Offer Details</h4>
+						<hr>
+						<div class="row" style="color:grey;" align="center">
+							<div class="col-md-6" style="margin-top:20px;"align="center">
+								<h5><i class="fa fa-tasks" aria-hidden="true"></i> Tasks To Carry Out<br></h5>
+								 {{ offer.tasks|nl2br }}
 
-									 <span class="caret"></span><a>Lugar: Valencia </a><span class="caret"></span><a>Fecha: {{ offer.beginDate }} - {{ offer.endDate }} </a><span class="caret"></span><a>Referencia: {{ offer.reference }}</a>
-									 <hr>
-									 <p style="color:grey;"> {{ offer.description }}</p>
-							 </div>
-						 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
-						 </a>
+							</div>
+							<div class="col-md-6" style="margin-top:20px;">
+								<h5><i class="fa fa-usd" aria-hidden="true"></i> Remuneration<br></h5>
+								{{ offer.remuneration|nl2br }}
+
+							</div>
+							</div>
+							<div class="row" style="color:grey;margin-top:20px;" align="center">
+							<div class="col-md-6" style="margin-top:20px;">
+								<h5><i class="fa fa-calendar-o" aria-hidden="true"></i> Minimum Stay<br></h5>
+								{{ offer.stay|nl2br }}
+							</div>
+							<div class="col-md-6" style="margin-top:20px;">
+								<h5><i class="fa fa-clock-o" aria-hidden="true"></i> Availability<br></h5>
+								{{ offer.availability|nl2br }}
+							</div>
+						</div>
+
+						<hr>
+						<h4 style="color:grey;margin-top:20px;" align="center" >Requirements </h4>
+						<hr>
+						<div class="row" style="color:grey;" align="center">
+							<div class="col-md-4" style="margin-top:20px;"align="center">
+								<h5><i class="fa fa-language" aria-hidden="true"></i> Language<br></h5>
+								 {{ offer.language|nl2br }}
+
+							</div>
+							<div class="col-md-4" style="margin-top:20px;">
+								<h5><i class="fa fa-graduation-cap" aria-hidden="true"></i> Previous studies<br></h5>
+								{{ offer.studies|nl2br }}
+
+							</div>
+
+							<div class="col-md-4" style="margin-top:20px;">
+								<h5><i class="fa fa-pencil-square-o" aria-hidden="true"></i></i> Skills<br></h5>
+								{{ offer.skills|nl2br }}
+
+
+							</div>
+							</div>
+							<hr>
+							<h4 style="color:grey;margin-top:20px;" align="center" >Other Requirements </h4>
+							<hr>
+							<div class="row" style="color:grey;margin-top:20px;" align="center">
+							<div class="col-md-4" style="margin-top:20px;">
+								<h5><i class="fa fa-id-card-o" aria-hidden="true"></i> Document needed<br></h5>
+
+								{{ offer.documents|nl2br }}
+
+
+							</div>
+
+							<div class="col-md-4" style="margin-top:20px;">
+								<h5><i class="fa fa-black-tie" aria-hidden="true"></i> Work clothing<br></h5>
+								{{ offer.clothing|nl2br }}
+
+							</div>
+
+							<div class="col-md-4" style="margin-top:20px;">
+								<h5><i class="fa fa-wrench" aria-hidden="true"></i> Work tools<br></h5>
+								{{ offer.tools|nl2br }}
+							</div>
+						</div>
+				</div>
+		</div>
+	</div>
+
+
 {% endfor %}
+<div  align="center" style="margin-top:60px;margin-bottom:60px;">
+	 <button class="btn btn-default btn-lg" onclick="goBack()">Go Back</button>
+</div>
 
 							 <!-- ========= End offers =========-->
 

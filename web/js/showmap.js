@@ -13,3 +13,9 @@ function hideMap() {
    document.getElementById('mapadiv').style.display = "none";
    document.getElementById('contacto').style.display = "block";
 }
+
+
+
+function goBack() {
+    window.history.back()
+}

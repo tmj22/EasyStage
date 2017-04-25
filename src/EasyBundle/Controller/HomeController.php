@@ -10,8 +10,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\File\MimeType\FileinfoMimeTypeGuesser;
 
 use Symfony\Component\HttpFoundation\Request;
-use EasyBundle\Entity\Offers;
-use EasyBundle\Form\OffersType;
+
 
 class HomeController extends Controller
 {
@@ -96,41 +95,6 @@ class HomeController extends Controller
 
           return $response;
       }
-
-
-        /**
-        * @Route("/offers")
-        **/
-
-      public function offersAction(Request $request) {
-        $em = $this->getDoctrine()->getEntityManager();
-        $dql = "SELECT e FROM EasyBundle:Offers e";
-        $query = $em->createQuery($dql);
-
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-                $query,
-                $request->query->getInt('page', 1),
-                5
-        );
-
-        return $this->render('EasyBundle:Default:offers.html.twig',
-                array('pagination' => $pagination));
-    }
-
-    /**
-    * @Route("/offers/{id}")
-    **/
-
-    public function offerDetailAction($id) {
-        $em = $this->getDoctrine()->getManager();
-        $offer = $em->createQuery("SELECT o FROM EasyBundle:Offers o WHERE o.id = :id")->setParameter("id", $id)->getResult();
-
-
-
-        return $this->render('EasyBundle:Default:offerdetail.html.twig',array("offer" => $offer));
-
-    }
 
 
 

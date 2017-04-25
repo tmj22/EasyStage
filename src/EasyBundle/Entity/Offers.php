@@ -70,6 +70,91 @@ class Offers
      */
     private $area;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="location", type="integer")
+     */
+    private $location;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tasks", type="text")
+     */
+    private $tasks;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="remuneration", type="text")
+     */
+    private $remuneration;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="stay", type="text")
+     */
+    private $stay;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="availability", type="text")
+     */
+    private $availability;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="language", type="text")
+     */
+    private $language;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="studies", type="text")
+     */
+    private $studies;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="skills", type="text")
+     */
+    private $skills;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="documents", type="text")
+     */
+    private $documents;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="clothing", type="text")
+     */
+    private $clothing;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tools", type="text")
+     */
+    private $tools;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="information", type="text")
+     */
+    private $information;
+
 
     /**
      * Get id
@@ -225,6 +310,300 @@ class Offers
         return $this->reference;
     }
 
+
+
+    /**
+     * Set area
+     *
+     * @param string $tasks
+     *
+     * @return Offers
+     */
+    public function setTasks($tasks)
+    {
+        $this->tasks = $tasks;
+
+        return $this;
+    }
+
+    /**
+     * Get tasks
+     *
+     * @return string
+     */
+    public function getTasks()
+    {
+        return $this->tasks;
+    }
+
+    /**
+     * Set remuneration
+     *
+     * @param string $remuneration
+     *
+     * @return Offers
+     */
+    public function setRemuneration($remuneration)
+    {
+        $this->remuneration = $remuneration;
+
+        return $this;
+    }
+
+    /**
+     * Get remuneration
+     *
+     * @return string
+     */
+    public function getRemuneration()
+    {
+        return $this->remuneration;
+    }
+
+    /**
+     * Set stay
+     *
+     * @param string $stay
+     *
+     * @return Offers
+     */
+    public function setStay($stay)
+    {
+        $this->stay = $stay;
+
+        return $this;
+    }
+
+    /**
+     * Get stay
+     *
+     * @return string
+     */
+    public function getStay()
+    {
+        return $this->stay;
+    }
+
+    /**
+     * Set availability
+     *
+     * @param string $availability
+     *
+     * @return Offers
+     */
+    public function setAvailability($availability)
+    {
+        $this->availability = $availability;
+
+        return $this;
+    }
+
+    /**
+     * Get availability
+     *
+     * @return string
+     */
+    public function getAvailability()
+    {
+        return $this->availability;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     *
+     * @return Offers
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set studies
+     *
+     * @param string $studies
+     *
+     * @return Offers
+     */
+    public function setStudies($studies)
+    {
+        $this->studies = $studies;
+
+        return $this;
+    }
+
+    /**
+     * Get studies
+     *
+     * @return string
+     */
+    public function getStudies()
+    {
+        return $this->studies;
+    }
+
+    /**
+     * Set skills
+     *
+     * @param string $skills
+     *
+     * @return Offers
+     */
+    public function setSkills($skills)
+    {
+        $this->skills = $skills;
+
+        return $this;
+    }
+
+    /**
+     * Get skills
+     *
+     * @return string
+     */
+    public function getSkills()
+    {
+        return $this->skills;
+    }
+
+
+
+    /**
+     * Set documents
+     *
+     * @param string $documents
+     *
+     * @return Offers
+     */
+    public function setDocuments($documents)
+    {
+        $this->documents = $documents;
+
+        return $this;
+    }
+
+    /**
+     * Get documents
+     *
+     * @return string
+     */
+    public function getDocuments()
+    {
+        return $this->documents;
+    }
+
+    /**
+     * Set clothing
+     *
+     * @param string $clothing
+     *
+     * @return Offers
+     */
+    public function setClothing($clothing)
+    {
+        $this->clothing = $clothing;
+
+        return $this;
+    }
+
+    /**
+     * Get clothing
+     *
+     * @return string
+     */
+    public function getClothing()
+    {
+        return $this->clothing;
+    }
+
+
+    /**
+     * Set tools
+     *
+     * @param string $tools
+     *
+     * @return Offers
+     */
+    public function setTools($tools)
+    {
+        $this->tools = $tools;
+
+        return $this;
+    }
+
+    /**
+     * Get tools
+     *
+     * @return string
+     */
+    public function getTools()
+    {
+        return $this->tools;
+    }
+
+
+    /**
+     * Set location
+     *
+     * @param integer $location
+     *
+     * @return Offers
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return int
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * Set information
+     *
+     * @param string $information
+     *
+     * @return Offers
+     */
+    public function setInformation($information)
+    {
+        $this->information = $information;
+
+        return $this;
+    }
+
+    /**
+     * Get information
+     *
+     * @return string
+     */
+    public function getInformation()
+    {
+        return $this->information;
+    }
+
     /**
      * Set area
      *
@@ -248,5 +627,5 @@ class Offers
     {
         return $this->area;
     }
-}
 
+}
