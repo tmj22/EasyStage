@@ -4,7 +4,7 @@
 {% block contenido %}
 <div class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/offers-bg.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;">Internship Offers Abroad</h1><hr class="ruler"></div>
 					 <!-- Begin buscador -->
-					 <section id="cta-section">
+					 <section id="cta-section" style="    margin-bottom: -190px;">
 						 <div class="cta">
 							 <div class="container">
 									 <div class="row">
@@ -116,6 +116,9 @@
 							 </div>
 							 <div class="col-md-9">
 									 <a href="/offers/{{ offer.id }}"><h3>{{ offer.name }}</h3></a>
+									 {% if is_granted('ROLE_USER') %}
+<strong>EDIT </strong> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>     <strong>DELETE  </strong><i class="fa fa-trash" aria-hidden="true"></i><br>
+{% endif %}
 
 									 <i class="fa fa-map-marker"></i><span> Location: Valencia </span>&nbsp;
 									 <i class="fa fa-calendar"></i><span> Date: {{ offer.beginDate }} - {{ offer.endDate }}</span>&nbsp;
@@ -123,7 +126,16 @@
 									 <hr>
 									 <p> {{ offer.description }}{{ offer.picture}}</p>
 							 </div>
-						 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+
+							 {% if offer.area == 1 %}
+   			 					</div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+							 {% elseif offer.area == 2 %}
+    		 					</div><img src="{{ asset('img/italyFlag.png')}}" class="countryIcon"></a></div>
+							 {% elseif offer.area == 3 %}
+    		 					</div><img src="{{ asset('img/franceFlag.png')}}" class="countryIcon"></a></div>
+							 {% else %}
+						 			</div><img src="" class="countryIcon"></a></div>
+							 {% endif %}
 						 </a>
 {% endfor %}
 

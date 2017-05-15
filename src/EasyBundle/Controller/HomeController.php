@@ -12,6 +12,8 @@ use Symfony\Component\HttpFoundation\File\MimeType\FileinfoMimeTypeGuesser;
 use Symfony\Component\HttpFoundation\Request;
 
 
+use EasyBundle\Entity\Offers;
+
 class HomeController extends Controller
 {
     /**
@@ -19,6 +21,7 @@ class HomeController extends Controller
      */
     public function indexAction()
     {
+
         return $this->render('EasyBundle:Default:index.html.twig');
     }
 
@@ -96,6 +99,15 @@ class HomeController extends Controller
           return $response;
       }
 
+
+
+      /**
+       * @Route("/contact")
+       */
+      public function ContactAction()
+      {
+          return $this->render('EasyBundle:Default:process.html.twig');
+      }
 
 
 }

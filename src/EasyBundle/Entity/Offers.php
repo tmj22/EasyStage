@@ -31,7 +31,14 @@ class Offers
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="city", type="string", length=255)
+     */
+    private $city;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
      */
     private $description;
 
@@ -189,6 +196,32 @@ class Offers
     {
         return $this->name;
     }
+
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     *
+     * @return Offers
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
 
     /**
      * Set description

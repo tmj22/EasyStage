@@ -15,6 +15,8 @@ use EasyBundle\Form\ItemFilterType;
 use EasyBundle\Entity\Offers;
 use EasyBundle\Form\OffersType;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 class OffersController extends Controller
 {
     /**
@@ -48,6 +50,7 @@ class OffersController extends Controller
 
       /**
       * @Route("/newoffer")
+      * @Security("has_role('ROLE_SUPER_ADMIN')")
       **/
 
       public function nuevoAction(Request $request)
@@ -112,41 +115,11 @@ class OffersController extends Controller
            5
    );
 
-   if ($area =="" && $location =="") {
-     return $this->redirectToRoute('offers');
-   }else {
-
-        return $this->render('EasyBundle:Default:results.html.twig',
-                array('pagination' => $pagination));
-   }
-
+   return $this->render('EasyBundle:Default:results.html.twig',
+           array('pagination' => $pagination));
 
  }else{
    return $this->redirectToRoute('offers');
  }
 }
-
-/**
-* @Route("/reference", name="reference")
-**/
-public function referenceAction(Request $request) {
-
-    $offers = null;
-
-     if ($_REQUEST != NULL) {
-          $refNumber = $request->query->get("refNumber");
-
-    $em = $this->getDoctrine()->getManager();
-    $offer = $em->createQuery("SELECT e FROM EasyBundle:Offers e WHERE e.reference = :reference")->setParameter("reference", $refNumber)->getResult();
-    if ($refNumber == "") {
-      return $this->redirectToRoute('offers');
-    }else{
-      return $this->render('EasyBundle:Default:offerdetail.html.twig',array("offer" => $offer));
-    }
-
-  }else {
-
   }
-
- }
-}

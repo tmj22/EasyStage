@@ -1,3 +1,5 @@
+
+
 easy:
     resource: "@EasyBundle/Controller/"
     type:     annotation
@@ -6,3 +8,14 @@ easy:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+
+users:
+    resource: "@UsersBundle/Controller/"
+    type:     annotation
+    prefix:   /users
+
+
+
+logout:
+  path: users/logout

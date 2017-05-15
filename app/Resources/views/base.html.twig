@@ -95,6 +95,10 @@
                             <li><a class="page-scroll" href="/europeanprojects">European Projects</a></li>
                             <li><a class="page-scroll" href="#contact-section">Contact</a></li>
 														<li><a class="page-scroll" href="">Blog</a></li>
+														{% if is_granted('ROLE_USER') %}
+<li><a class="page-scroll" href="">NEW OFFER</a></li>
+<li><a class="page-scroll" href="">LOGOUT</a></li>
+{% endif %}
                         </ul>
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container -->

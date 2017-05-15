@@ -40,35 +40,57 @@
 					 <table class="table">
   <tr>
   {{ form_start(form) }}
+<div class="form-group-stylish row" style="padding-left:20px;padding-right:20px;">
+	<div class="col-md-4" style="font-size:20px;">
+    {{ form_row(form.name,{ "attr":{ "class": "form-control"}}) }}<br>
 
-    {{ form_row(form.name) }}
+		{{ form_row(form.city,{ "attr":{ "class": "form-control"}}) }}<br>
 
-    {{ form_row(form.description) }}
+    {{ form_row(form.description,{ "attr":{ "class": "form-control"}}) }}<br>
 
-    {{ form_row(form.endDate) }}
+    {{ form_row(form.endDate,{ "attr":{ "class": "form-control"}}) }}<br>
 
-    {{ form_row(form.beginDate) }}
+    {{ form_row(form.beginDate,{ "attr":{ "class": "form-control"}}) }}<br>
 
-		{{ form_row(form.picture) }}
+		{{ form_row(form.picture) }}<br>
 
-		{{ form_row(form.reference) }}
+		{{ form_row(form.reference,{ "attr":{ "class": "form-control"}}) }}<br>
 
-		{{ form_row(form.area) }}
-1-españa 2-italia 3-francia
-		{{ form_row(form.location) }}
-		{{ form_row(form.information) }}
-		{{ form_row(form.tasks) }}
-		{{ form_row(form.remuneration) }}
-		{{ form_row(form.stay) }}
-		{{ form_row(form.availability) }}
-		{{ form_row(form.language) }}
-		{{ form_row(form.studies) }}
-		{{ form_row(form.skills) }}
-		{{ form_row(form.tools) }}
-		{{ form_row(form.clothing) }}
-		{{ form_row(form.documents) }}
+		{{ form_row(form.area,{ "attr":{ "class": "form-control"}}) }}<br>
+	</div>
+	<div class="col-md-4" style="font-size:20px;">
 
-		{{ form_row(form.submit) }}
+		{{ form_row(form.location,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.information,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.tasks,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.remuneration,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.stay,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.availability,{ "attr":{ "class": "form-control"}}) }}<br>
+			{{ form_row(form.submit,{ "attr":{ "class": "form-control"}}) }}
+	</div>
+	<div class="col-md-4" style="font-size:20px;">
+
+		{{ form_row(form.language,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.studies,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.skills,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.tools,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.clothing,{ "attr":{ "class": "form-control"}}) }}<br>
+
+		{{ form_row(form.documents,{ "attr":{ "class": "form-control"}}) }}<br>
+
+
+
+	</div>
+	</div>
 
   {{ form_end(form) }}
 
