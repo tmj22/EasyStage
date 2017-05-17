@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Offers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Description</th>
+                <th>Begindate</th>
+                <th>Enddate</th>
+                <th>Picture</th>
+                <th>Reference</th>
+                <th>Area</th>
+                <th>Location</th>
+                <th>Tasks</th>
+                <th>Remuneration</th>
+                <th>Stay</th>
+                <th>Availability</th>
+                <th>Language</th>
+                <th>Studies</th>
+                <th>Skills</th>
+                <th>Documents</th>
+                <th>Clothing</th>
+                <th>Tools</th>
+                <th>Information</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offer in offers %}
+            <tr>
+                <td><a href="{{ path('offers_show', { 'id': offer.id }) }}">{{ offer.id }}</a></td>
+                <td>{{ offer.name }}</td>
+                <td>{{ offer.city }}</td>
+                <td>{{ offer.description }}</td>
+                <td>{{ offer.beginDate }}</td>
+                <td>{{ offer.endDate }}</td>
+                <td>{{ offer.picture }}</td>
+                <td>{{ offer.reference }}</td>
+                <td>{{ offer.area }}</td>
+                <td>{{ offer.location }}</td>
+                <td>{{ offer.tasks }}</td>
+                <td>{{ offer.remuneration }}</td>
+                <td>{{ offer.stay }}</td>
+                <td>{{ offer.availability }}</td>
+                <td>{{ offer.language }}</td>
+                <td>{{ offer.studies }}</td>
+                <td>{{ offer.skills }}</td>
+                <td>{{ offer.documents }}</td>
+                <td>{{ offer.clothing }}</td>
+                <td>{{ offer.tools }}</td>
+                <td>{{ offer.information }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('offers_show', { 'id': offer.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('offers_edit', { 'id': offer.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('offers_new') }}">Create a new offer</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -48,9 +48,67 @@ class OffersController extends Controller
           return $this->render('EasyBundle:Default:offerdetail.html.twig',array("offer" => $offer));
       }
 
+
+
+      /**
+      * @Route("/delete/{id}")
+      * @Security("has_role('ROLE_ADMIN')")
+      **/
+      public function deleteAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+          'DELETE
+             EasyBundle:Offers offer
+           WHERE
+             offer.id = :id'
+           )
+           ->setParameter("id", $id);
+
+        $result = $query->execute();
+       return $this->redirectToRoute('offers', array('status'=>'OK'));
+      }
+
+
+      /**
+      * @Route("/update/{id}")
+      * @Security("has_role('ROLE_ADMIN')")
+      **/
+      public function updateAction($id,Request $request){
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('EasyBundle:Offers')->find($id);
+        $form = $this->createForm(OffersType::class,$offer);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+       // $form->getData() holds the submitted values
+       // but, the original `$task` variable has also been updated
+       $offer = $form->getData();
+       // Recogemos el fichero
+        $file=$form['picture']->getData();
+
+        // Sacamos la extensión del fichero
+        $ext=$file->guessExtension();
+
+        // Le ponemos un nombre al fichero
+        $file_name=time().".".$ext;
+
+        // Guardamos el fichero en el directorio uploads que estará en el directorio /web del framework
+        $file->move("uploads/offerPics", $file_name);
+
+        // Establecemos el nombre de fichero en el atributo de la entidad
+        $offer->setPicture($file_name);
+
+       // ... perform some action, such as saving the task to the database
+       // for example, if Task is a Doctrine entity, save it!
+       $em->persist($offer);
+       $em->flush();
+       return $this->redirectToRoute('offers', array('status'=>'OK'));
+       }
+        return $this->render('EasyBundle:Default:updateoffer.html.twig',array('form' => $form->createView()));
+      }
+
       /**
       * @Route("/newoffer")
-      * @Security("has_role('ROLE_SUPER_ADMIN')")
+      * @Security("has_role('ROLE_ADMIN')")
       **/
 
       public function nuevoAction(Request $request)

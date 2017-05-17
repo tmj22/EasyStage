@@ -1,14 +1,11 @@
 <?php
-
 namespace EasyBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
 class OffersType extends AbstractType
 {
     /**
@@ -23,6 +20,7 @@ class OffersType extends AbstractType
         ->add('endDate')
         ->add('picture', FileType::class,array(
                 "label" => "Imagen:",
+                "data_class" => null,
                 "attr" =>array("class" => "form-control")
             ))
         ->add('reference')
@@ -77,7 +75,6 @@ class OffersType extends AbstractType
         ->add('clothing')->add('tools')
         ->add('submit', SubmitType::class);
     }
-
     /**
      * {@inheritdoc}
      */
@@ -87,7 +84,6 @@ class OffersType extends AbstractType
             'data_class' => 'EasyBundle\Entity\Offers'
         ));
     }
-
     /**
      * {@inheritdoc}
      */
@@ -95,6 +91,4 @@ class OffersType extends AbstractType
     {
         return 'easybundle_offers';
     }
-
-
 }

@@ -117,7 +117,7 @@
 							 <div class="col-md-9">
 									 <a href="/offers/{{ offer.id }}"><h3>{{ offer.name }}</h3></a>
 									 {% if is_granted('ROLE_USER') %}
-<strong>EDIT </strong> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>     <strong>DELETE  </strong><i class="fa fa-trash" aria-hidden="true"></i><br>
+<strong><a href="/update/{{ offer.id }}">EDIT </strong> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><a href="/delete/{{ offer.id }}" >    <strong>DELETE  </strong><i class="fa fa-trash" aria-hidden="true"></i></a><br>
 {% endif %}
 
 									 <i class="fa fa-map-marker"></i><span> Location: Valencia </span>&nbsp;
