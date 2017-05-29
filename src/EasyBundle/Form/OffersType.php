@@ -30,7 +30,7 @@ class OffersType extends AbstractType
             'Reception & Booking'=>1,
         		'Bar & Restaurant'=>2,
         		'Kitchen'=>3,
-        		'Housekeeping'=>4,
+        		'Housekeeping/Room Service'=>4,
         		'Events'=>5,
         		'Human Resources'=>6,
         		'Maintenance'=>7,
@@ -38,7 +38,7 @@ class OffersType extends AbstractType
         		'Entertainers'=>9,
         		'Hairdresser'=>10,
         		'Beautician'=>11,
-        		'Physiotherapist'=>12,
+        		'Spa'=>12,
         		'Information Technician'=>13,
         		'Web Design & Development'=>14,
         		'Graphic Design'=>15,
@@ -60,9 +60,9 @@ class OffersType extends AbstractType
         ->add('location', ChoiceType::class,array(
                 "label" => "Location",
                 'choices' => array(
-                'Spain' => 1,
-                'Italy' => 2,
-                'France' => 3,
+                'Valencia' => 1,
+                'Barcelona' => 2,
+                'Balear Islands' => 3,
               ),
                 "attr" =>array("class" => "form-control")
             ))

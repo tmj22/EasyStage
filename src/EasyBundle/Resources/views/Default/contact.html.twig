@@ -1,0 +1,93 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}Contact{% endblock %}
+{% block contenido %}
+<!-- Begin contact section -->
+<div id="contacto" style="padding-top:40px;">
+<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/contact-bg.jpg);">
+<div class="cover"></div>
+
+		 <!-- Begin page header-->
+		<div class="page-header-wrapper">
+				<div class="container">
+						<div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+								<h2>Contact</h2>
+
+						</div>
+				</div>
+		</div>
+		<!-- End page header-->
+
+		<div class="contact">
+				<div class="container">
+					<div class="row">
+
+								<div class="col-sm-6">
+										<div class="contact-info">
+
+												<ul class="contact-address">
+											<li class="anchor" onclick="showMap()" style="cursor:pointer"><i class="fa fa-map-marker fa-lg"></i>&nbsp; Avenida Giorgeta 35, puerta 26<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Valencia, Spain, 46017<p class="message">SHOW MAP</p></li>
+											<li><i class="fa fa-phone"></i><a href="tel:963368691" style="color:white!important;">&nbsp; 00 34 96 336 86 91</a></li>
+											<li><i class="fa fa-print"></i>&nbsp; +34 963 368 691</li>
+											<li><a href="/contact" style="color:white!important;"><i class="fa fa-envelope"></i> info@easystage.eu</a></li>
+
+											<li><i class="fa fa-skype"></i> info@easystage.eu</li>
+											<!--<li><a href="https://api.whatsapp.com/api/send?phone=696814665&text=Hola%20estoy%20probando%20una%20cosa"></i> whatsapp</li>-->
+
+									</ul>
+										</div>
+								</div>
+
+							<div class="col-sm-6">
+										<div class="contact-form">
+											<h4>Write us</h4>
+												<form role="form" action="mail" role="search"  method="post" enctype="multipart/form-data">
+
+													<div class="form-group">
+															<textarea class="form-control input-lg" rows="1" name="subject" placeholder="Subject" required></textarea>
+													</div>
+
+														<div class="form-group">
+																<input type="email" class="form-control input-lg" name="from" placeholder="E-mail" required>
+														</div>
+
+
+
+
+
+														<div class="form-group">
+																<textarea class="form-control input-lg" rows="4" name="message" placeholder="Message" required></textarea>
+														</div>
+														<button type="submit" class="btn">Send</button>
+												</form>
+
+
+
+										</div>
+								</div>
+
+						</div> <!-- /.row -->
+				</div> <!-- /.container -->
+		</div>
+
+</section>
+</div>
+<!-- End contact section -->
+
+<style>
+#wrapper { position: relative; }
+#over_map { position: absolute; bottom: 20px; right: 50px; z-index: 99; }
+</style>
+
+<div id="wrapper">
+	<div id="mapadiv" style="display:none;">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d770.1090695115944!2d-0.3848309527119772!3d39.4594715934522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f3a03a325a9%3A0x83b00b9d093cc803!2sAv.+de+Giorgeta%2C+35%2C+46007+Val%C3%A8ncia%2C+Valencia!5e0!3m2!1ses!2ses!4v1489074291462" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen>
+		</iframe>
+		<div id="over_map">
+		 <span class="btn btn-default btn-lg" role="button" onclick="hideMap()">Hide Map</span>
+		</div>
+	</div>
+
+
+</div>
+{% endblock %}

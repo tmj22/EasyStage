@@ -200,7 +200,7 @@ section {
 	padding: 24px 0;
 	margin-left: 12px;
 	text-transform: uppercase;
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 600;
 }
 
@@ -475,7 +475,7 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 
 /* Begin cta section */
 #cta-section {
-	padding: 70px 0 80px;
+	padding: 40px 0 10px;
 }
 .cta-btn {
 	margin-top: 30px;
@@ -1164,7 +1164,7 @@ p.subtitle {
 }
 
 .esquina{
-	border-radius: 400px 400px 0px 0px!important;
+	border-radius: 250px 250px 0px 0px!important;
 }
 .activity{
 	margin-bottom: 30px;
@@ -1228,7 +1228,7 @@ p.subtitle {
 }
 
 .banner{
-	height:400px;
+	height:450px!important;
 	width:100%;
 	background-repeat: no-repeat !important;
 	background-position: center !important;
@@ -1400,19 +1400,19 @@ p.subtitle {
 
 
 #header-carousel {
-  height: 400px;
+  height: 450px;
 }#cazza1 {
-  height: 400px;
+  height: 450px;
   background-image: url(img/side1.jpg);
   background-position: center center;
   background-size: cover;
 }#cazza2 {
-  height: 400px;
+  height: 450px;
   background-image: url(img/slide2.jpg);
   background-position: center center;
   background-size: cover;
 }#cazza3 {
-  height: 400px;
+  height: 450px;
   background-image: url(img/slide3.jpg);
   background-position: center center;
   background-size: cover;
@@ -1434,4 +1434,13 @@ li{
 .anchor:hover + .message{
     display:block !important;
     z-index:10;
+}
+
+
+#logo_footer{
+	margin-top:20px;
+	width:80px;
+	height:80px;
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
 }

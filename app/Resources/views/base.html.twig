@@ -83,21 +83,14 @@
                         <ul class="nav navbar-nav navbar-right">
 													  <li><a class="page-scroll" href="/">Home</a></li>
                             <li><a class="page-scroll" href="/easystage">EasyStage</a></li>
-                            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Internship
-                            <span class="caret"></span></a>
-                              <ul class="dropdown-menu nav navbar-nav navbar-right" >
-                              <li><a class="page-scroll" href="/offers">Offers</a></li>
-                              <li><a class="page-scroll"  href="/destinations">Destinations</a></li>
-                              <li><a class="page-scroll" href="/areas">Areas</a></li>
-                              <li><a class="page-scroll" href="/process">Process</a></li>
-                              </ul>
-                            </li>
+                            <li><a class="page-scroll" href="/internship">Internship</a></li>
                             <li><a class="page-scroll" href="/europeanprojects">European Projects</a></li>
-                            <li><a class="page-scroll" href="#contact-section">Contact</a></li>
+														<li><a class="page-scroll" href="/offers">Offers</a></li>
+                            <li><a class="page-scroll" href="/contact">Contact</a></li>
 														<li><a class="page-scroll" href="">Blog</a></li>
 														{% if is_granted('ROLE_USER') %}
-<li><a class="page-scroll" href="">NEW OFFER</a></li>
-<li><a class="page-scroll" href="">LOGOUT</a></li>
+<li><a class="page-scroll" href="/newoffer">NEW OFFER</a></li>
+<li><a class="page-scroll" href="/users/logout">LOGOUT</a></li>
 {% endif %}
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -121,54 +114,30 @@
             <!-- Begin footer -->
             <footer class="text-off-white">
 
-                <div class="footer-top">
-                	<div class="container">
-                    	<div class="row wow bounceInLeft" data-wow-delay="0.4s">
-
-                            <div class="col-sm-6 col-md-4">
-                            	<h4>RRSS</h4>
-                                <ul class="imp-links">
-                                	<li><a href="https://www.facebook.com/easystagevalencia/"><i class="fa fa-facebook"></i>&nbsp;Facebook</a></li>
-                                	<li><a href="https://www.instagram.com/easystagevalencia/"><i class="fa fa-twitter"></i>&nbsp;Twitter</a></li>
-                                	<li><a href="https://twitter.com/easystagevlc"><i class="fa fa-instagram"></i>&nbsp;Instagram</a></li>
-                                </ul>
-                            </div>
-
-                        	<div class="col-sm-6 col-md-4">
-                                <h4>Subscribe</h4>
-                            	<div id="footer_signup">
-                                    <div id="email">
-                                        <form id="subscribe" method="POST">
-                                            <input type="text" placeholder="Enter email address" name="email" id="address" data-validate="validate(required, email)"/>
-                                            <button type="submit">Submit</button>
-                                            <span id="result" class="section-description"></span>
-                                        </form>
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-
-                            <div class="col-sm-12 col-md-4">
-                                <h4>Recent Tweets</h4>
-                                <div class="single-tweet">
-                                    <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non proident</div>
-                                    <div class="tweet-date">1 Hour ago</div>
-                                </div>
-                                <div class="single-tweet">
-                                    <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non proident uku shumaru</div>
-                                    <div class="tweet-date">1 Hour ago</div>
-                                </div>
-                            </div>
-
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-                </div>
 
                 <div class="footer">
-                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
-                        <p class="copyright">Copyright &copy; 2015 - Designed By <a href="https://www.behance.net/poljakova" class="theme-author">Veronika Poljakova</a> &amp; Developed by <a href="http://www.imransdesign.com/" class="theme-author">Imransdesign</a></p>
+									<div class="col-sm-12 col-md-12 text-center">
+
+									</div>
+									<div class="container text-center wow fadeIn" data-wow-delay="0.4s" style="font-size:30px;">
+										Follow Us<div style="margin-bottom:16px;"></div>
+											<a href="https://www.facebook.com/easystagevalencia/" style="color:white!important;"><i class="fa fa-facebook" aria-hidden="true"></i> </a>
+											&nbsp;<a href="https://twitter.com/easystagevlc" style="color:white!important;"><i class="fa fa-twitter" aria-hidden="true"></i> </a>
+											&nbsp;<a href="https://www.instagram.com/easystagevalencia/" style="color:white!important;"><i class="fa fa-instagram" aria-hidden="true"></i> </a>
+									</div><br>
+									<div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+											<p class="copyright" ><a href="/"style="color:white!important;"> Home</a> | <a href="/internship"style="color:white!important;"> Internship </a> | <a href="/europeanprojects"style="color:white!important;"> Erasmus+ </a> | <a href="offers"style="color:white!important;"> Offers </a> | <a href="/activities"style="color:white!important;"> Activities </a> |
+												 <a href="/accommodation"style="color:white!important;"> Accommodation </a> | <a href="/courses"style="color:white!important;"> Courses </a> |
+												 <a href="copyright"style="color:white!important;"> Language Trip Abroad </a> | <a href="/contact"style="color:white!important;"> Contact us </a> | <a href="/"style="color:white!important;"> Privacy Policy</a></p>
+<img src="{{ asset('img/logofooter.png') }}" id="logo_footer">
+									</div><br>
+                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s"><button class="btn" style="float:right;left:-30px;"><a class= "page-scroll" href="#header"> <i class="fa fa-arrow-up fa-1x" aria-hidden="true"> </i></a></button>
+                        <p class="copyright">Copyright &copy; 2017 Easystage | All rights reserved | Avenida Giorgeta 35, puerta 26, Valencia, Spain, 46017 | +34 963 368 691 | info@easystage.eu</p>
+
                     </div>
+
                 </div>
+
 
             </footer>
             <!-- End footer -->

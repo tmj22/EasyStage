@@ -2,123 +2,88 @@
 {% extends 'base.html.twig' %}
 {% block titulo %}Offers{% endblock %}
 {% block contenido %}
-<div class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/offers-bg.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;">Internship Offers Abroad</h1><hr class="ruler"></div>
-					 <!-- Begin buscador -->
-					 <section id="cta-section">
-						 <div class="cta">
-							 <div class="container">
-									 <div class="row">
+<div id="offersBanner" class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/offers-bg.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;">Internship Offers Abroad</h1><hr class="ruler"></div>
+<!-- Begin buscador -->
+<section id="cta-section" style="    margin-bottom: -190px;">
+	<div class="cta">
+		<div class="container">
+				<div class="row">
 
-											 <div class="col-md-9">
-													 <h1>Search Offers</h1>
+						<div class="col-md-9">
+								<h1>Search Offers</h1>
 
-												 </div>
-
-											 </div>
-											 <div class="container">
-	 <div class="row">
-			 <div class='col-sm-6'>
-					 <div class="form-group">
-							 <div class='input-group date' id='datetimepicker1' style="margin-left: -14px;">
-									 <input type='text' class="form-control" />
-									 <span class="input-group-addon" style="margin-left: -14px;">
-											 <span class="glyphicon glyphicon-calendar"></span>
-									 </span>
-							 </div>
-					 </div>
-			 </div>
-			 <script type="text/javascript">
-					 $(function () {
-							 $('#datetimepicker1').datetimepicker();
-					 });
-			 </script>
-	 </div>
-</div>
-
-											 <form action="filter" role="search"  method="GET">
-									 <div class="form-group-stylish row">
-											 <div class="col-sm-3">
-												 <label for="type1" class="control-label">Location</label>
-												 <select class="form-control" name="" id="type1">
-													 <option value="">Any</option>
-													 <option value="">Spain</option>
-													 <option value="">Italy</option>
-													 <option value="">France</option>
-												 </select>
-											 </div>
-											 <div class="col-sm-3">
-												 <label for="type1" class="control-label">Area</label>
-												 <select class="form-control" name="area" id="area">
-													 <option value="">Any</option>
-													 <optgroup label="-Hotels & Restaurants-"></optgroup>
-													 <option value="1">Reception & Booking</option>
-													 <option value="2">Bar & Restaurant</option>
-													 <option value="3">Kitchen</option>
-													 <option value="4">Housekeeping</option>
-													 <option value="5">Events</option>
-													 <option value="6">Human Resources</option>
-													 <option value="7">Maintenance</option>
-													 <option value="8">Gardening</option>
-													 <option value="9">Entertainers</option>
-													 <optgroup label="-Wellness-"></optgroup>
-													 <option value="10">Hairdresser</option>
-													 <option value="11">Beautician</option>
-													 <option value="12">Physiotherapist</option>
-													 <optgroup label="-Technology-"></optgroup>
-													 <option value="13">Information Technician</option>
-													 <option value="14">Web Design & Development</option>
-													 <option value="15">Graphic Design</option>
-													 <optgroup label="-Engineering-"></optgroup>
-													 <option value="16">Automotive</option>
-													 <option value="17">Agriculture & Food</option>
-													 <option value="18">Industry & Materials</option>
-													 <option value="19">Electrical & Electronics</option>
-													 <option value="20">Metallurgical</option>
-													 <option value="21">Arquitecture & Construction</option>
-													 <optgroup label="-Business & Communication-"></optgroup>
-													 <option value="22">Administration</option>
-													 <option value="23">Finances & Accounting</option>
-													 <option value="24">Marketing & Commercial</option>
-													 <option value="25">Social Networks & Communication</option>
-													 <option value="26">Customer Service</option>
-													 <option value="27">Logistics</option>
-												 </select>
-											 </div>
-											 <div class="col-sm-3"><field name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
-												 <label for="type1" class="control-label">Date</label>
-												 <field name="mycalendar" type="calendar" default="5-10-2008" label="Select a date" description="" format="%d-%m-%Y" />
-												 <select class="form-control" name="" id="type1">
-													 <option value="">Any</option>
-													 <option value="">1</option>
-													 <option value="">2</option>
-												 </select>
-											 </div>
-									 </div>
-									 <br>
-									 <div class="form-group-stylish row">
-											 <div class="col-sm-3">
-												 <label for="type1" class="control-label">Ref. Number</label>
-													 <input type="text" class="form-control" placeholder="Enter Ref. Number">
-											 </div>
-											 <div class="col-sm-3">
-												 <label for="type1" class="control-label">Key Word</label>
-													 <input type="text" class="form-control" placeholder="Enter Key Word">
-											 </div>
-											 <div class="col-md-3">
-												 <div class="cta-btn " >
-
-												 	 <button type="submit" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span>Search</button>
-												 </div>
-											 </div>
-									 </div>
-							 </form>
-
-										 </div> <!-- /.row -->
-								 </div> <!-- /.container -->
 						 </div>
-					 </section>
 
-					 <!-- End buscador -->
+				 </div>
+						<div class="container">
+
+
+
+						<form action="filter" role="search"  method="GET">
+				<div class="form-group-stylish row">
+
+					<div class="col-sm-3">
+						<label for="type1" class="control-label">Area</label>
+						<select class="form-control" name="area" id="area">
+							<optgroup label="-Hotels & Restaurants-"></optgroup>
+							<option value="1">Reception & Booking</option>
+							<option value="2">Bar & Restaurant</option>
+							<option value="3">Kitchen</option>
+							<option value="4">Room Service/Housekeeping</option>
+							<option value="5">Events</option>
+							<option value="6">Human Resources</option>
+							<option value="7">Maintenance</option>
+							<option value="8">Gardening</option>
+							<option value="9">Entertainers</option>
+							<optgroup label="-Wellness-"></optgroup>
+							<option value="10">Hairdresser</option>
+							<option value="11">Beautician</option>
+							<option value="12">Spa</option>
+							<optgroup label="-Technology-"></optgroup>
+							<option value="13">Information Technician</option>
+							<option value="14">Web Design & Development</option>
+							<option value="15">Graphic Design</option>
+							<optgroup label="-Engineering-"></optgroup>
+							<option value="16">Automotive</option>
+							<option value="17">Agriculture & Food</option>
+							<option value="18">Industry & Materials</option>
+							<option value="19">Electrical & Electronics</option>
+							<option value="20">Metallurgical</option>
+							<option value="21">Arquitecture & Construction</option>
+							<optgroup label="-Business & Communication-"></optgroup>
+							<option value="22">Administration</option>
+							<option value="23">Finances & Accounting</option>
+							<option value="24">Marketing & Commercial</option>
+							<option value="25">Social Networks & Communication</option>
+							<option value="26">Customer Service</option>
+							<option value="27">Logistics</option>
+						</select>
+
+					</div>
+						<div class="col-sm-3">
+							<label for="type1" class="control-label">City</label>
+							<select class="form-control" name="location" id="location">
+								<option value="1">Valencia</option>
+								<option value="2">Barcelona</option>
+								<option value="3">Balear Islands</option>
+							</select>
+						</div>
+
+
+						<div class="col-sm-3">
+							<button type="submit" class="btn btn-default btn-lg"style="margin-top:10px;">Search</button>
+						</div>
+
+				</div>
+				</form>
+
+
+
+
+					</div> <!-- /.row -->
+			</div> <!-- /.container -->
+	</div>
+</section>
 					 <!-- ========= Begin offers =========-->
 					 <div class="page-header-wrapper " style="margin-top:200px;">
 							 <div class="container">

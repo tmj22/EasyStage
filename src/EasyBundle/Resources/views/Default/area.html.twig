@@ -1,0 +1,58 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}Results{% endblock %}
+{% block contenido %}
+
+
+					 <!-- End buscador -->
+					 <!-- ========= Begin offers =========-->
+					 <div class="page-header-wrapper " style="margin-top:200px;" id="offersBanner">
+							 <div class="container">
+									 <div class="page-header text-center" >
+											 <h2 style="margin-top:50px;">{{pagination.getTotalItemCount}} Offers Available</h2><br>
+
+											 <img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+											 {% if pagination.getTotalItemCount == 0 %}
+
+												 <div class="cta-btn " >
+
+												 	 <button type="submit" class="btn btn-default btn-lg">Back</button>
+												 </div>
+
+
+{% endif %}
+
+									 </div>
+							 </div>
+					 </div>
+
+{% for offer in pagination %}
+
+					 <div class="note" style="color:grey;">
+						 <div class="row">
+							 <div class="col-md-3">
+									 <a href="/offers/{{ offer.id }}"><img class="offerPic" src="{{asset('uploads/offerPics/' ~ offer.picture)}}"></a>
+							 </div>
+							 <div class="col-md-9">
+									 <a href="/offers/{{ offer.id }}"><h3>{{ offer.name }}</h3></a>
+
+									 <i class="fa fa-map-marker"></i><span> Location: Valencia </span>&nbsp;
+									 <i class="fa fa-calendar"></i><span> Date: {{ offer.beginDate }} - {{ offer.endDate }}</span>&nbsp;
+									 <i class="fa fa-info"></i><a><span> Ref. Number: {{ offer.reference }}</span>&nbsp;
+									 <hr>
+									 <p> {{ offer.description }}{{ offer.picture}}</p>
+							 </div>
+						 </div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
+						 </a>
+{% endfor %}
+
+
+							 <!-- ========= End offers =========-->
+							 <div class="row">
+								  <div class="col-md-12">
+										 <div class="navigation" style="text-align:center">
+												 {{ knp_pagination_render(pagination) }}
+										 </div>
+									</div>
+						  </div>
+{% endblock %}

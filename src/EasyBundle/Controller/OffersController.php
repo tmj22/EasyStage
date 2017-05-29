@@ -25,7 +25,7 @@ class OffersController extends Controller
 
       public function offersAction(Request $request) {
           $em = $this->getDoctrine()->getEntityManager();
-          $dql = "SELECT e FROM EasyBundle:Offers e";
+          $dql = "SELECT e FROM EasyBundle:Offers e ORDER BY e.id DESC";
           $query = $em->createQuery($dql);
 
           $paginator = $this->get('knp_paginator');
@@ -101,6 +101,7 @@ class OffersController extends Controller
        // for example, if Task is a Doctrine entity, save it!
        $em->persist($offer);
        $em->flush();
+
        return $this->redirectToRoute('offers', array('status'=>'OK'));
        }
         return $this->render('EasyBundle:Default:updateoffer.html.twig',array('form' => $form->createView()));
@@ -163,7 +164,7 @@ class OffersController extends Controller
      $area = $request->query->get("area");
 
    $em = $this->getDoctrine()->getEntityManager();
-   $dql = "SELECT e FROM EasyBundle:Offers e WHERE e.area = :area AND e.location = :location";
+   $dql = "SELECT e FROM EasyBundle:Offers e WHERE e.area = :area AND e.location = :location ORDER BY e.id DESC";
    $query = $em->createQuery($dql)->setParameter("area", $area)->setParameter("location", $location);
 
    $paginator = $this->get('knp_paginator');
@@ -180,4 +181,29 @@ class OffersController extends Controller
    return $this->redirectToRoute('offers');
  }
 }
-  }
+
+
+
+/**
+ * @Route("/area/{area}")
+ **/
+ public function AreaAction($area,Request $request)
+{
+
+
+     $em = $this->getDoctrine()->getEntityManager();
+     $dql = "SELECT e FROM EasyBundle:Offers e WHERE e.area = :area ORDER BY e.id DESC";
+     $query = $em->createQuery($dql)->setParameter("area", $area);
+
+     $paginator = $this->get('knp_paginator');
+     $pagination = $paginator->paginate(
+             $query,
+             $request->query->getInt('page', 1),
+             5
+     );
+
+     return $this->render('EasyBundle:Default:area.html.twig',
+             array('pagination' => $pagination));
+
+    }
+}

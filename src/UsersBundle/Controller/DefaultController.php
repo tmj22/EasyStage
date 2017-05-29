@@ -132,4 +132,11 @@ class DefaultController extends Controller
 
     }
 
+    /**
+ * @Route("/logout", name="usuario_logout")
+ */
+public function logoutAction(Request $request)
+{
+}
+
 }

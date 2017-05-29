@@ -1,0 +1,68 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}Apply{% endblock %}
+{% block contenido %}
+<!-- Begin contact section -->
+<div id="contacto" style="padding-top:40px;">
+<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5">
+<div class="cover"></div>
+
+		 <!-- Begin page header-->
+		<div class="page-header-wrapper">
+				<div class="container">
+						<div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+								<h2>Apply</h2>
+								<div style="font-weight:bold;"><a href="/template/eng" >Download CV Template(In English)</a></div>
+								<br>
+								<div style="font-weight:bold;"><a href="/template/esp" >Descargar plantilla CV(En Español)</a></div>
+						</div>
+				</div>
+		</div>
+		<!-- End page header-->
+
+		<div class="contact">
+				<div class="container">
+					<div class="row">
+
+
+
+							<div class="col-sm-12">
+										<div class="contact-form">
+
+												<form role="form" action="send" role="search"  method="post" enctype="multipart/form-data">
+
+													<div class="form-group">
+															<textarea class="form-control input-lg" rows="1" name="subject1" placeholder="Offer Ref. Number" required>Offer Ref. Number</textarea>
+													</div>
+
+														<div class="form-group">
+																<input type="email" class="form-control input-lg" name="from1" placeholder="E-mail" required>
+														</div>
+
+														<div class="form-group">
+																<input type="file" class="form-control input-lg" name="fichero1" placeholder="Curriculum">
+														</div>
+
+
+
+														<div class="form-group">
+																<textarea class="form-control input-lg" rows="4" name="message1" placeholder="Message" required></textarea>
+														</div>
+														<button type="submit" class="btn">Send</button>
+												</form>
+
+
+
+										</div>
+								</div>
+
+						</div> <!-- /.row -->
+				</div> <!-- /.container -->
+		</div>
+
+</section>
+</div>
+<!-- End contact section -->
+
+
+{% endblock %}

@@ -1,0 +1,86 @@
+
+{% extends 'base.html.twig' %}
+{% block titulo %}Availability{% endblock %}
+{% block contenido %}
+<!-- Begin contact section -->
+<div id="contacto" style="padding-top:40px;">
+<section id="contact-section" class="page text-white parallax" data-stellar-background-ratio="0.5" >
+<div class="cover"></div>
+
+		 <!-- Begin page header-->
+		<div class="page-header-wrapper">
+				<div class="container">
+						<div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+								<h2>Check Availability</h2>
+
+						</div>
+				</div>
+		</div>
+		<!-- End page header-->
+
+		<div class="contact">
+				<div class="container">
+					<div class="row">
+
+
+							<div class="col-sm-12">
+										<div class="contact-form">
+
+												<form role="form" action="check" role="search"  method="post" enctype="multipart/form-data">
+
+													<div class="form-group">
+															<textarea class="form-control input-lg" rows="1" name="subject2" placeholder="Subject" required></textarea>
+													</div>
+
+													<div class="form-group">
+															<textarea class="form-control input-lg" rows="1" name="name" placeholder="Name" required></textarea>
+													</div>
+
+													<div class="form-group">
+															<textarea class="form-control input-lg" rows="1" name="lastname" placeholder="Last Name" required></textarea>
+													</div>
+
+														<div class="form-group">
+																<input type="email" class="form-control input-lg" name="from2" placeholder="E-mail" required>
+														</div>
+
+														<div class="form-group form-control">
+														<select name="accommodation" >
+													 	 <option value="Shared Flat">Shared Flat</option>
+													 	 <option value="Host Families">Host Families</option>
+													 	 <option value="University Residence">University Residence</option>
+														 <option value="Studio Apartment, B&B & Hotel">Studio Apartment, B&B & Hotel</option>
+													 </select>
+												 </div>
+
+												 <div class="form-group">
+														 <input type="date"  name="date" placeholder="Date" required>
+												 </div>
+
+
+
+
+
+														<div class="form-group">
+																<textarea class="form-control input-lg" rows="4" name="message2" placeholder="Message" required></textarea>
+														</div>
+														<button type="submit" class="btn">Send</button>
+												</form>
+
+
+
+										</div>
+								</div>
+
+						</div> <!-- /.row -->
+				</div> <!-- /.container -->
+		</div>
+
+</section>
+</div>
+<!-- End contact section -->
+
+
+
+
+{% endblock %}
