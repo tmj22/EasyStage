@@ -27,7 +27,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
-                                <a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+                                <div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
                                     <div align="center">
                                         <p style="text-allign:left;line-height:20pt;">EasyStage is a Spanish company founded in 2016 that hosts students and groups in the framework of European Mobility Projects.
                                         The main objective of EasyStage is to promote the internationalization of the professional and linguistic skills of people involved in the different projects of in the Erasmus + Program.
@@ -36,7 +36,7 @@
                                         </p>
 																	  </div>
 
-                                </a>
+                                </div>
                             </div>
 
 
@@ -52,29 +52,6 @@
 
 
 
-                <!-- Begin download Brochure -->
-                <section id="cta-section">
-                  <div class="cta">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-md-9">
-                                <h1>Download our Brochure</h1>
-
-                              </div>
-
-                              <div class="col-md-3">
-                                <div class="cta-btn">
-
-                              <a style="top:-30px;" class="btn btn-default btn-lg" href="{{path('download_file')}}" target="_blank" role="button">Download</a>
-                                </div>
-                              </div>
-
-                          </div> <!-- /.row -->
-                      </div> <!-- /.container -->
-                  </div>
-                </section>
-                <!-- End Brochure -->
 
 
                 <!-- <div class="extra-space-l"></div>-->
@@ -84,7 +61,7 @@
 					<!-- Begin page header-->
 					<div class="page-header-wrapper">
 							<div class="container">
-									<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+									<div class="page-header text-center wow fadeInUp" data-stellar-background-ratio="0" data-wow-delay="0.3s">
 											<h2>Our Team</h2><br>
 											<img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
 									</div>
@@ -92,36 +69,47 @@
 					</div>
 					<!-- End page header-->
 					<!-- Begin Team-->
-					<div class="rotate-box-1-wrapper">
-							<div class="container">
-									<div class="row">
-											<div class="col-md-6 col-sm-12" align="center">
-													<a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
-															<div class="rotate-box-info">
-																<img class="teamPic" src="{{ asset('img/fotoSara.jpg')}}">
-																	<h4 style="font-weight:bold;" class="text-center">Sara Carducci<br>Directora</h4>
-															</div>
-													</a>
-											</div>
-											<div class="col-md-6 col-sm-12" align="center">
-													<a href="#" class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+          <section id="testimonial-section">
+              <div id="testimonial-trigger" class="testimonial text-white parallax" style="background-image: url(img/team-bg.jpg);">
+                  <div class="cover" style="background-color: rgba(0, 0, 0, 0.6)!important;"></div>
+                  <!-- Begin page header-->
+                  <div class="page-header-wrapper">
+                      <div class="container">
+                          <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                              <h2>Our Team</h2><br>
+                            <img src="{{ asset('img/puntos.png')}}" class="puntos" align="center">
+                          </div>
+                      </div>
+                  </div>
+                  <!-- End page header-->
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-md-6 col-sm-12" align="center">
+                              <div>
+                                  <div>
+                                    <img class="teamPic" src="{{ asset('img/fotoSara.jpg')}}">
+                                      <h4 style="font-weight:bold;" class="text-center">Sara Carducci<br>Directora</h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12" align="center">
+                              <div>
 
-															<div class="rotate-box-info">
-																	<img class="teamPic" src="{{ asset('img/fotoSara.jpg')}}">
-																	<h4 style="font-weight:bold;" class="text-center">Sebastián Peralta<br>Subdirector</h4>
-															</div>
-													</a>
-											</div>
+                                  <div>
+                                      <img class="teamPic" src="{{ asset('img/fotoSebas.jpg')}}">
+                                      <h4 style="font-weight:bold;" class="text-center">Sebastián Peralta<br>Subdirector</h4>
+                                  </div>
+                              </div>
+                          </div>
 
 
-									</div> <!-- /.row -->
+                      </div> <!-- /.row -->
+
+                        </div>
+                    </div>
 
 
-
-
-							</div> <!-- /.container -->
-
-					</div>
+          </section>
           <!-- End team-->
 
 
@@ -155,6 +143,31 @@
                 </div>
             </section>
             <!-- End offices -->
+
+            <!-- Begin download Brochure -->
+            <section id="cta-section">
+              <div class="cta">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-9">
+                            <h1>Download our Brochure</h1>
+
+                          </div>
+
+                          <div class="col-md-3">
+                            <div class="cta-btn">
+
+                          <a style="top:-30px;" class="btn btn-default btn-lg" href="{{path('download_file')}}" target="_blank" role="button">Download</a>
+                            </div>
+                          </div>
+
+                      </div> <!-- /.row -->
+                  </div> <!-- /.container -->
+              </div>
+            </section>
+            <!-- End Brochure -->
+
 
 
 

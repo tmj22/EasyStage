@@ -63,6 +63,7 @@ class OffersType extends AbstractType
                 'Valencia' => 1,
                 'Barcelona' => 2,
                 'Balear Islands' => 3,
+                'Others' => 4,
               ),
                 "attr" =>array("class" => "form-control")
             ))

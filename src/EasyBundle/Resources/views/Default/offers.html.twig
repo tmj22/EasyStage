@@ -2,7 +2,7 @@
 {% extends 'base.html.twig' %}
 {% block titulo %}Offers{% endblock %}
 {% block contenido %}
-<div id="offersBanner" class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/offers-bg.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;">Internship Offers Abroad</h1><hr class="ruler"></div>
+<div id="offersBanner" class="banner testimonial text-white parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/offers-bg.jpg);" id="testimonial-trigger" data-stellar-background-ratio="0.5"><h1 class="text-center" style="margin-top:40px;">Internship Offers Abroad</h1></div>
 					 <!-- Begin buscador -->
 					 <section id="cta-section" style="    margin-bottom: -190px;">
 						 <div class="cta">
@@ -114,10 +114,10 @@
 									 <i class="fa fa-calendar"></i><span> Date: {{ offer.beginDate }} - {{ offer.endDate }}</span>&nbsp;
 									 <i class="fa fa-info"></i><a><span> Ref. Number: {{ offer.reference }}</span>&nbsp;
 									 <hr>
-									 <p> {{ offer.description }}{{ offer.picture}}</p>
+									 <p> {{ offer.description }}</p>
 							 </div>
 
-					
+
    			 					</div><img src="{{ asset('img/spainFlag.png')}}" class="countryIcon"></a></div>
 
 						 </a>

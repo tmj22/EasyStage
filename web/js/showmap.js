@@ -1,21 +1,12 @@
 
+$(document).ready(function(){
+  $('#showmap').click(function(){
+    $('#mapadiv').slideToggle();
+    $('#contacto').slideToggle();
+  });
 
-
-
-
-function showMap() {
-   document.getElementById('mapadiv').style.display = "block";
-   document.getElementById('contacto').style.display = "none";
-}
-
-
-function hideMap() {
-   document.getElementById('mapadiv').style.display = "none";
-   document.getElementById('contacto').style.display = "block";
-}
-
-
-
-function goBack() {
-    window.history.back()
-}
+  $('#hidemap').click(function(){
+    $('#mapadiv').slideToggle();
+    $('#contacto').slideToggle();
+  });
+});

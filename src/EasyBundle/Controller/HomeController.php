@@ -76,6 +76,14 @@ class HomeController extends Controller
     }
 
     /**
+     * @Route("/languagetrip")
+     */
+    public function LanguageTripAction()
+    {
+        return $this->render('EasyBundle:Default:languagetrip.html.twig');
+    }
+
+    /**
      * @Route("/ecotur")
      */
     public function EcoturAction()
@@ -159,7 +167,7 @@ class HomeController extends Controller
     $message = \Swift_Message::newInstance()
         ->setSubject($subject)
         ->setFrom($from)
-        ->setTo('tom_mj91@hotmail.com')
+        ->setTo('info@easystage.eu')
         ->setBody($body);
 
 
@@ -191,15 +199,20 @@ class HomeController extends Controller
 
         $subject = $request->request->get("subject1");
         $from = $request->request->get("from1");
-        $body = $request->request->get("message1");
+        $name = $request->request->get("name1");
+        $lastname = $request->request->get("lastname1");
+        $message1 = $request->request->get("message1");
         $curriculum = $request->files->get("fichero1");
 
 
         $message = \Swift_Message::newInstance()
             ->setSubject($subject)
             ->setFrom($from)
-            ->setTo('tom_mj91@hotmail.com')
-            ->setBody($body);
+            ->setTo('info@easystage.eu')
+            ->setBody($this->renderView('EasyBundle:Default:applymail.html.twig',
+                  array('name' => $name,'lastname' => $lastname,'message' => $message1)
+              ),
+              'text/html');;
 
             $message->attach(\Swift_Attachment::fromPath($curriculum->getRealPath())->setFilename('curriculum.pdf'));
       $this->get('mailer')->send($message);
@@ -234,16 +247,17 @@ class HomeController extends Controller
       $name = $request->request->get("name");
       $lastname = $request->request->get("lastname");
       $accommodation = $request->request->get("accommodation");
-      $date = $request->request->get("date");
+      $begindate = $request->request->get("begindate");
+      $enddate = $request->request->get("enddate");
 
 
 
       $message = \Swift_Message::newInstance()
           ->setSubject($subject)
           ->setFrom($from)
-          ->setTo('tom_mj91@hotmail.com')
+          ->setTo('info@easystage.eu')
           ->setBody($this->renderView('EasyBundle:Default:checkmail.html.twig',
-                array('name' => $name,'lastname' => $lastname,'message' => $message, 'accommodation' => $accommodation, 'date' => $date)
+                array('name' => $name,'lastname' => $lastname,'message' => $message, 'accommodation' => $accommodation, 'begindate' => $begindate, 'enddate' => $enddate)
             ),
             'text/html');
 
@@ -298,4 +312,53 @@ class HomeController extends Controller
 
               return $response;
           }
+
+          /**
+           * @Route("/group")
+           */
+          public function GroupAction()          {
+              return $this->render('EasyBundle:Default:groupservices.html.twig');
+          }
+          /**
+           * @Route("/services",name="services")
+           */
+           public function ServicesAction(Request $request){
+      if ($_REQUEST != NULL) {
+
+        $subject ="HOLA";
+        $from3 = $request->request->get("from3");
+        $contactperson = $request->request->get("contactperson");
+        $institution = $request->request->get("institution");
+        $participants = $request->request->get("participants");
+        $begindate1 = $request->request->get("begindate1");
+        $enddate1 = $request->request->get("enddate1");
+        $message3 = $request->request->get("message3");
+
+
+
+
+        $message = \Swift_Message::newInstance()
+            ->setSubject($subject)
+            ->setFrom($from3)
+            ->setTo('info@easystage.eu')
+            ->setBody($this->renderView('EasyBundle:Default:groupsmail.html.twig',
+                  array('contactperson' => $contactperson,'institution' => $institution,'message' => $message3,'begindate'=>$begindate1,'enddate'=>$enddate1,'participants'=>$participants)
+              ),
+              'text/html');;
+
+      $this->get('mailer')->send($message);
+        //$response =new Response();
+        //$response->setContent(var_dump($curriculum->getRealPath()));
+        //return $response;
+            return $this->render('EasyBundle:Default:index.html.twig');
+        }else{
+          //return $response;
+            return $this->render('EasyBundle:Default:groupservices.html.twig');
+        }
+
+
+        }
+
+
+
 }
